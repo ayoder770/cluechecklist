@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<title>Clue Checklist</title>
+<!--<link href="logo.ico" rel="shortcut icon">
+<link href="logo.png" rel="apple-touch-icon-precomposed">-->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' >
+
+<style>
+    body{margin:0px;}    
+    .full_page{
+        width:100%;
+        font-family: sans-serif;
+        text-align: center;
+        background-color: azure;
+    }
+    .clue_container{
+        width:30%;
+        min-width: 350px;
+        position: relative;
+        margin: auto;
+        background-color: aquamarine;
+    }
+    .all_items{
+        font-weight: bold;
+        padding-top: 12px;
+        border: 2px solid #000000;
+        box-sizing: border-box;
+    }
+    .item_row{
+        display: inline-flex;
+        height: 45px;
+        width: 100%;
+    }
+    .item_yes{
+        width:70px;
+        background-color:green;
+        color: #ffffff;
+    }
+    .item_yes:hover{
+        cursor: pointer;
+    }
+    .item{
+        width: calc(100% - 140px);
+        border-right-style: none;
+        border-left-style: none;
+        background-color: #ffffff;
+    }
+    .item_no{
+        width: 70px;
+        background-color: red;
+        color: #ffffff;
+    }
+    .item_no:hover{
+        cursor: pointer;
+    }
+    .list_title{
+        font-weight: bolder;
+        text-transform: uppercase;
+        padding-top: 12px;
+        border: 2px solid #000;
+        box-sizing: border-box;
+        background-color: chocolate;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+</style>   
+    
+
+
+</head>
+
+<body>
+    <div class="full_page">
+        <div class="clue_container">
+            <div class="suspect_list">
+                <div class="list_title">Suspects</div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Mr. Green</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Col. Mustard</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Mrs. Peacock</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Prof. Plum</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Ms. Scarlet</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Mrs. White</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+            </div>
+            <div class="weapsons_list">
+                <div class="list_title">Weapons</div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Candlestick</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Knife</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Lead Pipe</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Revolver</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Rope</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Wrench</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+            </div>
+            <div class="rooms_list">
+                <div class="list_title">Rooms</div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Ballroom</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Billiard Room</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Conservatory</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Dining Room</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Hall</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Kitchen</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Library</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Lounge</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+                <div class="item_row maybe">
+                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
+                    <div class="item all_items">Study</div>
+                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                </div>
+            </div>
+        
+        
+        
+        
+        </div>
+    </div>
+</body>
+    
+<script>
+   function update_with_yes(object){
+       var id = object.id;
+       var parent = object.parentElement;
+       if(parent.classList.contains('maybe')){ 
+            object.nextElementSibling.style.backgroundColor="Green";
+            object.nextElementSibling.style.color="white";
+            object.nextElementSibling.nextElementSibling.style.backgroundColor="green";
+            object.nextElementSibling.nextElementSibling.style.color="black";
+            parent.classList.remove('maybe');
+            parent.classList.add('affirmative');
+       } else if(parent.classList.contains('negative')){
+           reset_row(parent);
+       } else{
+           return;
+       }
+   } 
+    
+    function update_with_no(object){
+       var id = object.id;
+       var parent = object.parentElement;
+       if(parent.classList.contains('maybe')){ 
+            object.previousElementSibling.style.backgroundColor="Red";
+            object.previousElementSibling.style.color="#000000";
+            object.previousElementSibling.previousElementSibling.style.backgroundColor="red";
+            object.previousElementSibling.previousElementSibling.style.color="black";
+            parent.classList.remove('maybe');
+            parent.classList.add('negative');
+       } else if(parent.classList.contains('affirmative')){
+           reset_row(parent);
+       } else{
+           return;
+       }
+        
+    }
+    
+    function reset_row(object){
+        if(object.classList.contains('negative')){
+            object.classList.remove('negative');
+            object.classList.add('maybe'); 
+        } else if(object.classList.contains('affirmative')){
+            object.classList.remove('affirmative');
+            object.classList.add('maybe');
+        } 
+        object.firstElementChild.style.backgroundColor="green";
+        object.firstElementChild.style.color = "#FFFFFF"
+        
+        object.firstElementChild.nextElementSibling.style.backgroundColor="#FFFFFF";
+        object.firstElementChild.nextElementSibling.style.color = "#000000"
+        
+        object.firstElementChild.nextElementSibling.nextElementSibling.style.backgroundColor="red";
+        object.firstElementChild.nextElementSibling.nextElementSibling.style.color = "#FFFFFF"
+       
+       
+    }
+
+</script>    
+    
+    
+    
+    
+</html>

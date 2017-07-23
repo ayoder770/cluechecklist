@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GasAware</title>
+    <link href="logo.ico" rel="shortcut icon">
+    <link href="logo.png" rel="apple-touch-icon-precomposed">
+      
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' >  
+      
+      
+    <!--LOAD JQUERY-->  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+      
+    <!--LOAD CSS-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" /> 
+      
+    <!--LOAD JS--> 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
+      
+  </head>
+    
+    
+  <body>
+      
+<!--STICKY NAV-->    
+<header>
+    <div class="sn_ham_cont"><img class="stick_open_nav" src="ham.png" /></div>
+    <div class="sn_dsk_nav_cont">
+        <div style="padding:10px 0px 0px 20px;" class="half">  
+            <a href="https://gasaware.herokuapp.com/">
+                <img id="header_pic" height="80spx" src="/logo.png" />
+            </a>
+        </div>
+        <div class="menu_half half">
+            <ul class="navinner">
+                <li><a href="https://gasaware.herokuapp.com/database">Database</a></li>
+                <li><a href="https://gasaware.herokuapp.com/map">Map</a></li> 
+                <li><a href="https://gasaware.herokuapp.com/newDevice">Add Device</a></li> 
+                <li><a href="firmware.zip" download="GasawareFirmware.zip">Download</a></li>
+            </ul>
+        </div>
+    </div> 
+    <div class="sn_mob_cont"> 
+        <ul id="stick_mob_menu" style="list-style-type:none;">
+            <li><a class="mob_nav_link" href="https://gasaware.herokuapp.com/database">Database</a></li>
+            <li><a class="mob_nav_link" href="https://gasaware.herokuapp.com/map">Map</a></li> 
+            <li><a class="mob_nav_link" href="https://gasaware.herokuapp.com/newDevice">Add Device</a></li> 
+            <li><a class="mob_nav_link" href="firmware.zip" download="GasawareFirmware.zip">Download</a></li>
+        </ul>     
+    </div>      
+</header>   
+   
+     
+      
+<!--MOBILE NAV-->
+<div style="position:absolute;width:100%;padding-top:33px;z-index:5000"><img  class="open_nav" src="ham.png" /></div>
+      
+ 
+      
+      
+      
+      
+<!--MAIN NAV-->
+ <div style="height:100px;background-color:#000000;display:flex;">
+    <div style="padding:10px 0px 0px 20px;" class="half"><a href="https://gasaware.herokuapp.com/"><img id="header_pic" height="80spx" src="/logo.png" /></a></div>
+     <div class="menu_half half">
+      <ul class="navinner" style="float:right;padding-right:40px;padding-top:24px;">
+          <li><a href="https://gasaware.herokuapp.com/database">Database</a></li>
+           <li><a href="https://gasaware.herokuapp.com/map">Map</a></li> 
+           <li><a href="https://gasaware.herokuapp.com/newDevice">Add Device</a></li> 
+           <li><a href="firmware.zip" download="GasawareFirmware.zip">Download</a></li>
+      </ul>
+     </div>
+     
+     
+</div>
+      
+      
+ <div style="position:absolute;width:100%;background-color: rgba(0, 0, 0, 0.7);z-index:100;"> 
+  <ul id="mob_menu" style="list-style-type:none;">
+          <li><a class="mob_nav_link" href="https://gasaware.herokuapp.com/database">Database</a></li>
+           <li><a class="mob_nav_link" href="https://gasaware.herokuapp.com/map">Map</a></li> 
+           <li><a class="mob_nav_link" href="https://gasaware.herokuapp.com/newDevice">Add Device</a></li> 
+           <li><a class="mob_nav_link" href="firmware.zip" download="GasawareFirmware.zip">Download</a></li>
+      </ul>     
+    </div>     
+      
+<script>
+      jQuery('.open_nav').click(function(){
+     jQuery(this).toggleClass('opened');
+     if (jQuery(this).hasClass('opened')){
+        jQuery("#mob_menu").slideDown();
+     } else{
+        jQuery("#mob_menu").slideUp();
+     }
+});
+    
+       jQuery('.stick_open_nav').click(function(){
+     jQuery(this).toggleClass('opened');
+     if (jQuery(this).hasClass('opened')){
+        jQuery("#stick_mob_menu").slideDown();
+     } else{
+        jQuery("#stick_mob_menu").slideUp();
+     }
+});   
+</script>
