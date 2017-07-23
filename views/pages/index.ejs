@@ -19,7 +19,7 @@
     }
     .clue_container{
         width:30%;
-        min-width: 350px;
+        min-width: 450px;
         position: relative;
         margin: auto;
         background-color: aquamarine;
@@ -73,7 +73,6 @@
             min-width:100%;
         }
     }
-    
 </style>   
     
 </head>
@@ -81,7 +80,7 @@
 <body>
     <div class="full_page">
         <div class="clue_container">
-            <div class="suspect_list">
+            <div id="suspect_list">
                 <div class="list_title">Suspects</div>
                 <div class="item_row maybe">
                     <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
@@ -114,7 +113,7 @@
                     <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
                 </div>
             </div>
-            <div class="weapsons_list">
+            <div id="weapsons_list">
                 <div class="list_title">Weapons</div>
                 <div class="item_row maybe">
                     <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
@@ -147,7 +146,7 @@
                     <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
                 </div>
             </div>
-            <div class="rooms_list">
+            <div id="rooms_list">
                 <div class="list_title">Rooms</div>
                 <div class="item_row maybe">
                     <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
