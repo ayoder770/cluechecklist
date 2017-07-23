@@ -76,8 +76,6 @@
     
 </style>   
     
-
-
 </head>
 
 <body>
@@ -197,10 +195,6 @@
                     <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
                 </div>
             </div>
-        
-        
-        
-        
         </div>
     </div>
 </body>
@@ -228,7 +222,7 @@
        var parent = object.parentElement;
        if(parent.classList.contains('maybe')){ 
             object.previousElementSibling.style.backgroundColor="Red";
-            object.previousElementSibling.style.color="#000000";
+            object.previousElementSibling.style.color="red";
             object.previousElementSibling.previousElementSibling.style.backgroundColor="red";
             object.previousElementSibling.previousElementSibling.style.color="black";
             parent.classList.remove('maybe');
@@ -237,8 +231,7 @@
            reset_row(parent);
        } else{
            return;
-       }
-        
+       } 
     }
     
     function reset_row(object){
@@ -251,19 +244,12 @@
         } 
         object.firstElementChild.style.backgroundColor="green";
         object.firstElementChild.style.color = "#FFFFFF"
-        
         object.firstElementChild.nextElementSibling.style.backgroundColor="#FFFFFF";
         object.firstElementChild.nextElementSibling.style.color = "#000000"
-        
         object.firstElementChild.nextElementSibling.nextElementSibling.style.backgroundColor="red";
-        object.firstElementChild.nextElementSibling.nextElementSibling.style.color = "#FFFFFF"
-       
-       
+        object.firstElementChild.nextElementSibling.nextElementSibling.style.color = "#FFFFFF"  
     }
 
 </script>    
-    
-    
-    
     
 </html>
