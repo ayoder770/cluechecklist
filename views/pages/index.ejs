@@ -38,6 +38,8 @@
         background-color:#ffffff;
         box-sizing:border-box;
         border-left: 2px solid #000000;
+        padding-top: 6px;
+        font-size:25px;
     }
 /*----------YES AND NO BOX ALWAYS---------*/
     .yon_always{
@@ -126,7 +128,7 @@
                     <div class="yes_default yon_always">YES</div>
                     <div class="item_always item_default">Mr. Green</div>
                     <div class="no_default yon_always">NO</div>
-                    <div class="my_card_box"><i class="fa fa-home" aria-hidden="true"></i></div>
+                    <div class="my_card_box"></div>
                 </div>
                 <div class="item_row maybe">
                     <div class="yes_default yon_always">YES</div>
@@ -313,11 +315,10 @@
             $(this).parent().addClass('maybe'); //parent state   
         }  
     });
-    
+     var home = '<i class="fa fa-home" aria-hidden="true"></i>';
     // my card checkbox
     $('.my_card_box').click(function(){
-        
-        
+        $(this).innerHTML = home;
     });
     
     
