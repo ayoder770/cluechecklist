@@ -232,10 +232,10 @@
     
    $('.yes_default').click(function(){
        if($(this).parent().hasClass('maybe')){
-           $(this).siblings('item_default').addClass('item_yes');
-           $(this).siblings('item_default').removeClass('item_default');
-           $(this).siblings('no_default').addClass('no_yes_state');
-           $(this).siblings('no_default').removeClass('no_default');
+           $(this).siblings('.item_default').addClass('item_yes');
+           $(this).siblings('.item_default').removeClass('item_default');
+           $(this).siblings('.no_default').addClass('no_yes_state');
+           $(this).siblings('.no_default').removeClass('no_default');
            $(this).parent().removeClass('maybe');
            $(this).parent().addClass('affirmative');
        }
