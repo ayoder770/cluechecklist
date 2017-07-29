@@ -24,39 +24,66 @@
         margin: auto;
         background-color: aquamarine;
     }
-    .all_items{
-        font-weight: bold;
-        padding-top: 12px;
-        border: 2px solid #000000;
-        box-sizing: border-box;
-    }
     .item_row{
         display: inline-flex;
         height: 45px;
         width: 100%;
     }
-    .item_yes{
-        width:70px;
+/*----------YES AND NO BOX ALWAYS---------*/
+    .yon_always{
+        width: 70px;
+        font-weight: bold;
+        padding-top: 12px;
+        border: 2px solid #000000;
+        box-sizing: border-box;
+    }
+/*----------YES BOX---------*/
+    .yes_default{
         background-color:green;
         color: #ffffff;
     }
-    .item_yes:hover{
+     .yes_default:hover{
         cursor: pointer;
     }
-    .item{
-        width: calc(100% - 140px);
-        border-right-style: none;
-        border-left-style: none;
-        background-color: #ffffff;
+    .yes_no_state{
+        background-color:red;
+        color:red;
     }
-    .item_no{
-        width: 70px;
+/*----------NO BOX---------*/
+    .no_default{
         background-color: red;
         color: #ffffff;
     }
-    .item_no:hover{
+    .no_default:hover{
         cursor: pointer;
     }
+    .no_yes_state{
+        background-color: green;
+        color:green;
+    }
+/*----------ITEM BOX ALWAYS---------*/
+    .item_always{
+        width: calc(100% - 140px);
+        border-right-style: none;
+        border-left-style: none;
+        font-weight: bold;
+        padding-top: 12px;
+        border: 2px solid #000000;
+        box-sizing: border-box;
+    }
+/*----------ITEM BOX---------*/
+    .item_default{
+        background-color:#ffffff;
+    }
+    .item_yes{
+        background-color:green;
+        color:#ffffff;
+    }
+    item_no{
+        background-color:red;
+        color:#000000;
+    }
+/*---------------------------------*/
     .list_title{
         font-weight: bolder;
         text-transform: uppercase;
@@ -83,115 +110,115 @@
             <div id="suspect_list">
                 <div class="list_title">Suspects</div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Mr. Green</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Mr. Green</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Col. Mustard</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Col. Mustard</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Mrs. Peacock</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Mrs. Peacock</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Prof. Plum</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Prof. Plum</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Ms. Scarlet</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Ms. Scarlet</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Mrs. White</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Mrs. White</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
             </div>
             <div id="weapsons_list">
                 <div class="list_title">Weapons</div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Candlestick</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Candlestick</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Knife</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Knife</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Lead Pipe</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Lead Pipe</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Revolver</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Revolver</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Rope</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Rope</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Wrench</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Wrench</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
             </div>
             <div id="rooms_list">
                 <div class="list_title">Rooms</div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Ballroom</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Ballroom</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Billiard Room</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Billiard Room</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Conservatory</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Conservatory</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Dining Room</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Dining Room</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Hall</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Hall</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Kitchen</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Kitchen</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Library</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Library</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Lounge</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Lounge</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
                 <div class="item_row maybe">
-                    <div onclick="update_with_yes(this)" class="item_yes all_items">YES</div>
-                    <div class="item all_items">Study</div>
-                    <div onclick="update_with_no(this)" class="item_no all_items">NO</div>
+                    <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Study</div>
+                    <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
             </div>
         </div>
@@ -203,10 +230,10 @@
        var id = object.id;
        var parent = object.parentElement;
        if(parent.classList.contains('maybe')){ 
-            object.nextElementSibling.style.backgroundColor="Green";
-            object.nextElementSibling.style.color="white";
-            object.nextElementSibling.nextElementSibling.style.backgroundColor="green";
-            object.nextElementSibling.nextElementSibling.style.color="green";
+            object.nextElementSibling.classList.remove('item_default'); //item box
+            object.nextElementSibling.classList.add('item_yes'); //item box
+            object.nextElementSibling.nextElementSibling.classList.remove('no_default'); //no box
+            object.nextElementSibling.nextElementSibling.classList.add('no_yes_state'); //no box
             parent.classList.remove('maybe');
             parent.classList.add('affirmative');
        } else if(parent.classList.contains('negative')){
