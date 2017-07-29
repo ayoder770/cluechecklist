@@ -8,7 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' >
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <style>
     body{margin:0px;}    
     .full_page{
@@ -140,8 +140,9 @@
                     <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
             </div>
+
             <div id="weapsons_list">
-                <div class="list_title">Weapons</div>
+            <div class="list_title">Weapons</div>
                 <div class="item_row maybe">
                     <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
                     <div class="item_always item_default">Candlestick</div>
@@ -173,8 +174,9 @@
                     <div onclick="update_with_no(this)" class="no_default yon_always">NO</div>
                 </div>
             </div>
+           
             <div id="rooms_list">
-                <div class="list_title">Rooms</div>
+            <div class="list_title">Rooms</div>
                 <div class="item_row maybe">
                     <div onclick="update_with_yes(this)" class="yes_default yon_always">YES</div>
                     <div class="item_always item_default">Ballroom</div>
@@ -226,31 +228,49 @@
 </body>
     
 <script>
-   function update_with_yes(object){
-       var id = object.id;
-       var parent = object.parentElement;
+    
+    
+   $('.yes_default').click(function(){
+       if($(this).parent().hasClass('maybe')){
+           $(this).siblings('item_default').addClass('item_yes');
+           $(this).siblings('item_default').removeClass('item_default');
+           $(this).siblings('no_default').addClass('no_yes_state');
+           $(this).siblings('no_default').removeClass('no_default');
+           $(this).parent().removeClass('maybe');
+           $(this).parent().addClass('affirmative');
+       }
+   });
+    
+    
+    
+   function update_with_yes(object){/*
+      var id = object.id;
+      var parent = object.parentElement;
        if(parent.classList.contains('maybe')){ 
-            object.nextElementSibling.classList.remove('item_default'); //item box
-            object.nextElementSibling.classList.add('item_yes'); //item box
+           object.nextElementSibling.classList.remove('item_default'); //item box
+           object.nextElementSibling.classList.add('item_yes'); //item box
             object.nextElementSibling.nextElementSibling.classList.remove('no_default'); //no box
-            object.nextElementSibling.nextElementSibling.classList.add('no_yes_state'); //no box
+           object.nextElementSibling.nextElementSibling.classList.add('no_yes_state'); //no box
             parent.classList.remove('maybe');
             parent.classList.add('affirmative');
        } else if(parent.classList.contains('negative')){
            reset_row(parent);
        } else{
            return;
-       }
+       }*/
    } 
+    
+    
+function update_siblings_to_no(object)
     
     function update_with_no(object){
        var id = object.id;
        var parent = object.parentElement;
        if(parent.classList.contains('maybe')){ 
-            object.previousElementSibling.style.backgroundColor="Red";
-            object.previousElementSibling.style.color="#000";
-            object.previousElementSibling.previousElementSibling.style.backgroundColor="red";
-            object.previousElementSibling.previousElementSibling.style.color="red";
+            object.previousElementSibling.classList.remove('item_default'); //item box
+            object.previousElementSibling.classList.add('item_yes'); //item box
+            object.previousElementSibling.previousElementSibling.classList.remove('yes_default'); //yes box
+            object.previousElementSibling.previousElementSibling.classList.add('no_yes_state'); //yes box
             parent.classList.remove('maybe');
             parent.classList.add('negative');
        } else if(parent.classList.contains('affirmative')){
@@ -270,8 +290,10 @@
         } 
         object.firstElementChild.style.backgroundColor="green";
         object.firstElementChild.style.color = "#FFFFFF"
+        
         object.firstElementChild.nextElementSibling.style.backgroundColor="#FFFFFF";
         object.firstElementChild.nextElementSibling.style.color = "#000000"
+        
         object.firstElementChild.nextElementSibling.nextElementSibling.style.backgroundColor="red";
         object.firstElementChild.nextElementSibling.nextElementSibling.style.color = "#FFFFFF"  
     }
