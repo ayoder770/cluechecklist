@@ -23,7 +23,8 @@
         min-width: 450px;
         position: relative;
         margin: auto;
-        background-color: aquamarine;
+        background-color: #000000;
+        display:flex;
     }
     .item_row{
         display: inline-flex;
@@ -31,6 +32,10 @@
         width: 100%;
         box-sizing: border-box;
         border: 2px solid #000000;
+    }
+    .thirds{
+        position:relative;
+        width:33.33%;
     }
     /*-----------------MY CARD-------------------*/
     .my_card_box{
@@ -122,87 +127,8 @@
 <body>
     <div class="full_page">
         <div class="clue_container">
-            <div id="suspect_list">
-                <div class="list_title">Suspects</div>
-                <div class="item_row maybe">
-                    <div class="yes_default yon_always">YES</div>
-                    <div class="item_always item_default">Mr. Green</div>
-                    <div class="no_default yon_always">NO</div>
-                    <div class="my_card_box not_my_card"></div>
-                </div>
-                <div class="item_row maybe">
-                    <div class="yes_default yon_always">YES</div>
-                    <div class="item_always item_default">Col. Mustard</div>
-                    <div class="no_default yon_always">NO</div>
-                    <div class="my_card_box not_my_card"></div>
-                </div>
-                <div class="item_row maybe">
-                    <div class="yes_default yon_always">YES</div>
-                    <div class="item_always item_default">Mrs. Peacock</div>
-                    <div class="no_default yon_always">NO</div>
-                    <div class="my_card_box not_my_card"></div>
-                </div>
-                <div class="item_row maybe">
-                    <div class="yes_default yon_always">YES</div>
-                    <div class="item_always item_default">Prof. Plum</div>
-                    <div class="no_default yon_always">NO</div>
-                    <div class="my_card_box not_my_card"></div>
-                </div>
-                <div class="item_row maybe">
-                    <div class="yes_default yon_always">YES</div>
-                    <div class="item_always item_default">Ms. Scarlet</div>
-                    <div class="no_default yon_always">NO</div>
-                    <div class="my_card_box not_my_card"></div>
-                </div>
-                <div class="item_row maybe">
-                    <div class="yes_default yon_always">YES</div>
-                    <div class="item_always item_default">Mrs. White</div>
-                    <div class="no_default yon_always">NO</div>
-                    <div class="my_card_box not_my_card"></div>
-                </div>
-            </div>
-
-            <div id="weapsons_list">
-            <div class="list_title">Weapons</div>
-                <div class="item_row maybe">
-                    <div class="yes_default yon_always">YES</div>
-                    <div class="item_always item_default">Candlestick</div>
-                    <div class="no_default yon_always">NO</div>
-                    <div class="my_card_box not_my_card"></div>
-                </div>
-                <div class="item_row maybe">
-                    <div class="yes_default yon_always">YES</div>
-                    <div class="item_always item_default">Knife</div>
-                    <div class="no_default yon_always">NO</div>
-                    <div class="my_card_box not_my_card"></div>
-                </div>
-                <div class="item_row maybe">
-                    <div class="yes_default yon_always">YES</div>
-                    <div class="item_always item_default">Lead Pipe</div>
-                    <div class="no_default yon_always">NO</div>
-                    <div class="my_card_box not_my_card"></div>
-                </div>
-                <div class="item_row maybe">
-                    <div class="yes_default yon_always">YES</div>
-                    <div class="item_always item_default">Revolver</div>
-                    <div class="no_default yon_always">NO</div>
-                    <div class="my_card_box not_my_card"></div>
-                </div>
-                <div class="item_row maybe">
-                    <div class="yes_default yon_always">YES</div>
-                    <div class="item_always item_default">Rope</div>
-                    <div class="no_default yon_always">NO</div>
-                    <div class="my_card_box not_my_card"></div>
-                </div>
-                <div class="item_row maybe">
-                    <div class="yes_default yon_always">YES</div>
-                    <div class="item_always item_default">Wrench</div>
-                    <div class="no_default yon_always">NO</div>
-                    <div class="my_card_box not_my_card"></div>
-                </div>
-            </div>
-           
-            <div id="rooms_list">
+            
+            <div class="thirds" id="rooms_list">
             <div class="list_title">Rooms</div>
                 <div class="item_row maybe">
                     <div class="yes_default yon_always">YES</div>
@@ -259,6 +185,92 @@
                     <div class="my_card_box not_my_card"></div>
                 </div>
             </div>
+            
+            
+            
+            
+            
+            <div class="thirds" id="suspect_list">
+                <div class="list_title">Suspects</div>
+                <div class="item_row maybe">
+                    <div class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Mr. Green</div>
+                    <div class="no_default yon_always">NO</div>
+                    <div class="my_card_box not_my_card"></div>
+                </div>
+                <div class="item_row maybe">
+                    <div class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Col. Mustard</div>
+                    <div class="no_default yon_always">NO</div>
+                    <div class="my_card_box not_my_card"></div>
+                </div>
+                <div class="item_row maybe">
+                    <div class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Mrs. Peacock</div>
+                    <div class="no_default yon_always">NO</div>
+                    <div class="my_card_box not_my_card"></div>
+                </div>
+                <div class="item_row maybe">
+                    <div class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Prof. Plum</div>
+                    <div class="no_default yon_always">NO</div>
+                    <div class="my_card_box not_my_card"></div>
+                </div>
+                <div class="item_row maybe">
+                    <div class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Ms. Scarlet</div>
+                    <div class="no_default yon_always">NO</div>
+                    <div class="my_card_box not_my_card"></div>
+                </div>
+                <div class="item_row maybe">
+                    <div class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Mrs. White</div>
+                    <div class="no_default yon_always">NO</div>
+                    <div class="my_card_box not_my_card"></div>
+                </div>
+            </div>
+
+            <div class="thirds" id="weapsons_list">
+            <div class="list_title">Weapons</div>
+                <div class="item_row maybe">
+                    <div class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Candlestick</div>
+                    <div class="no_default yon_always">NO</div>
+                    <div class="my_card_box not_my_card"></div>
+                </div>
+                <div class="item_row maybe">
+                    <div class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Knife</div>
+                    <div class="no_default yon_always">NO</div>
+                    <div class="my_card_box not_my_card"></div>
+                </div>
+                <div class="item_row maybe">
+                    <div class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Lead Pipe</div>
+                    <div class="no_default yon_always">NO</div>
+                    <div class="my_card_box not_my_card"></div>
+                </div>
+                <div class="item_row maybe">
+                    <div class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Revolver</div>
+                    <div class="no_default yon_always">NO</div>
+                    <div class="my_card_box not_my_card"></div>
+                </div>
+                <div class="item_row maybe">
+                    <div class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Rope</div>
+                    <div class="no_default yon_always">NO</div>
+                    <div class="my_card_box not_my_card"></div>
+                </div>
+                <div class="item_row maybe">
+                    <div class="yes_default yon_always">YES</div>
+                    <div class="item_always item_default">Wrench</div>
+                    <div class="no_default yon_always">NO</div>
+                    <div class="my_card_box not_my_card"></div>
+                </div>
+            </div>
+           
+
         </div>
     </div>
 </body>
