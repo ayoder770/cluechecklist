@@ -71,6 +71,9 @@
         border: 2px solid #000000;
         box-sizing: border-box;
     }
+    .item_always:hover{
+        cursor:pointer;
+    }
 /*----------ITEM BOX---------*/
     .item_default{
         background-color:#ffffff;
@@ -243,8 +246,8 @@
            $(this).parent().siblings().children('.item_default').removeClass('item_default'); //all sib item boxex
            $(this).parent().siblings().children('.yes_default').addClass('yes_no_state'); //all item yes boxes
            $(this).parent().siblings().children('.yes_default').addClass('yes_no_state'); //all item yes boxes
-           $(this).parent().siblings('maybe').addClass('negative'); // parent sib states
-           $(this).parent().siblings('maybe').removeClass('maybe'); //parent sib states
+           $(this).parent().siblings('.maybe').addClass('negative'); // parent sib states
+           $(this).parent().siblings('.maybe').removeClass('maybe'); //parent sib states
            
        }
    });
@@ -261,24 +264,30 @@
    });  
 
 
+   //reset row when item is selected
+    $('.item_always').click(function(){
+        if($(this).parent().hasClass('affirmative')){
+            $(this).removeClass('item_yes');
+            $(this).addClass('item_default');
+            $(this).siblings('.no_yes_state').addClass('no_default'); // no box
+            $(this).siblings('.no_yes_state').removeClass('no_yes_state'); //no box
+            $(this).parent().removeClass('affirmative'); // parent state
+            $(this).parent().addClass('maybe'); //parent state
+        } else if($(this).parent().hasClass('negative')){
+            $(this).removeClass('item_no'); // item box
+            $(this).addClass('item_default'); // item box
+            $(this).siblings('.yes_no_state').addClass('yes_default'); // yes box
+            $(this).siblings('.yes_no_state').removeClass('yes_default'); //yes box
+            $(this).parent().removeClass('negative'); // parent state
+            $(this).parent().addClass('maybe'); //parent state   
+        }  
+    });
     
-    function reset_row(object){
-        if(object.classList.contains('negative')){
-            object.classList.remove('negative');
-            object.classList.add('maybe'); 
-        } else if(object.classList.contains('affirmative')){
-            object.classList.remove('affirmative');
-            object.classList.add('maybe');
-        } 
-        object.firstElementChild.style.backgroundColor="green";
-        object.firstElementChild.style.color = "#FFFFFF"
-        
-        object.firstElementChild.nextElementSibling.style.backgroundColor="#FFFFFF";
-        object.firstElementChild.nextElementSibling.style.color = "#000000"
-        
-        object.firstElementChild.nextElementSibling.nextElementSibling.style.backgroundColor="red";
-        object.firstElementChild.nextElementSibling.nextElementSibling.style.color = "#FFFFFF"  
-    }
+    
+    
+    
+    
+    
 
 </script>    
     
