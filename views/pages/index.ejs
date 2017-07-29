@@ -2,15 +2,12 @@
 <html lang="en-US">
 <head>
 <title>Clue Checklist</title>
-<link href="logo.ico" rel="shortcut icon">
+<link href="mag_glass.ico" rel="shortcut icon">
 <link href="clue.png" rel="apple-touch-icon-precomposed">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' >
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        
+<% include ../partials/global_header.ejs %>
+       
 <link rel="stylesheet" type="text/css" href="/stylesheets/clue_style.css" />
-<link rel="stylesheet" type="text/css" href="/stylesheets/font_awesome.css" />
     
 </head>
 
@@ -19,7 +16,7 @@
         <div class="clue_container">
             
             <div class="thirds" id="rooms_list">
-            <div class="list_title">Rooms</div>
+                <div class="list_title">Rooms</div>
                 <div class="item_row maybe">
                     <div class="yes_default yon_always">YES</div>
                     <div class="item_always item_default">Ballroom</div>
@@ -76,10 +73,6 @@
                 </div>
             </div>
             
-            
-            
-            
-            
             <div class="thirds" id="suspect_list">
                 <div class="list_title">Suspects</div>
                 <div class="item_row maybe row_dsk">
@@ -121,7 +114,7 @@
             </div>
 
             <div class="thirds" id="weapsons_list">
-            <div class="list_title">Weapons</div>
+                <div class="list_title">Weapons</div>
                 <div class="item_row maybe row_dsk">
                     <div class="yes_default yon_always yon_dsk">YES</div>
                     <div class="item_always item_default yon_dsk">Candlestick</div>
@@ -159,11 +152,10 @@
                     <div class="my_card_box not_my_card yon_dsk"></div>
                 </div>
             </div>
-           
-
         </div>
     </div>
 </body>
  
 <script type="text/javascript" src="/js/clue_scripts.js" async defer></script>
-</html>
+    
+<% include ../partials/global_footer.ejs %>
