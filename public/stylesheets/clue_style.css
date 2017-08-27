@@ -71,6 +71,7 @@
     }
 /*----------ITEM BOX ALWAYS---------*/
     .item_always{
+        font-size: 16px;
         width: calc(100% - 150px);
         border-right-style: none;
         border-left-style: none;
@@ -110,5 +111,12 @@
         .clue_container{
             width:100%;
             min-width:100%;
+        }
+    }
+
+
+    @media screen and (max-width:800px){
+        .item_always{
+            font-size: 12px;
         }
     }
