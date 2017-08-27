@@ -9,7 +9,6 @@
         width:100%;
         position: relative;
         margin: auto;
-        background-color: #000000;
         display:flex;
     }
     .item_row{
@@ -119,4 +118,19 @@
         .item_always{
             font-size: 12px;
         }
+    }
+
+
+
+    @media screen and (max-width:768px){
+        .clue_container{
+            display:block;
+        }
+        .thirds{
+            width:80%;
+            margin:auto;
+        }
+        .item_always{font-size:16px;}
+        .row_dsk{height:45px;}
+        
     }
