@@ -37,16 +37,17 @@
                    $(function(){
             $('#players_form').on('submit', function(e){
             e.preventDefault();
-            var days = $('#days').val();
+            var players = $('#players').val();
+                console.log("hello");
               $.ajax({
             type: 'GET',
             url: '/sendData?id=' + global_id,
             success: function(result) {
                  //console.log(result);
                 printStats(result, days);
+                alert("hello");
                
             }
-                  alert("hello");
             });
             
       
