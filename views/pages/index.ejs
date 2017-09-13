@@ -7,11 +7,18 @@
 <% include ../partials/global_header.ejs %> 
 </head>
 
-<body>
-   
-    <a href = "clue.ejs">Go to Clue Page</a>
+
     
-     <a href = "score.ejs">Go to Score Page</a>
+    //View the 100 most recent samples from Device 1 in realtime
+app.get('/visualization', function(request, response) {
+    response.render('pages/visualization');
+});
+    
+  <body>  
+   
+    <a href = "/clue">Go to Clue Page</a>
+    
+     <a href = "/score">Go to Score Page</a>
     
     
 </body>

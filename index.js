@@ -50,14 +50,14 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-//View the 100 most recent samples from Device 1 in realtime
-app.get('/visualization', function(request, response) {
-    response.render('pages/visualization');
+//Clue Checklist
+app.get('/clue', function(request, response) {
+    response.render('pages/clue');
 });
 
-//Displays Database values in table
-app.get('/database', function(request, response) {
-  response.render('pages/database');
+//Five Crowns Scoresheet
+app.get('/five-crowns', function(request, response) {
+  response.render('pages/five-crowns');
 });
 
 //Map that shows all deviecs and allows 
