@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<title>Five Crowns Scorecard</title>
+<link href="mag_glass.ico" rel="shortcut icon">
+<link href="clue.png" rel="apple-touch-icon-precomposed">
+<% include ../partials/global_header.ejs %> 
+<link rel="stylesheet" type="text/css" href="/stylesheets/five_crowns_style.css" />
+</head>
+    
+    
+  <body>
+    
+       <form role="form">
+                       
+                       
+                        <div class="form-group">
+                            <label for="days">
+                                View Statistics: Enter Number of Days to Include</label>
+                            <input style="width:150px;height:32px;" id="days" type="text" class="form-control" placeholder="ex: 7 (Days)" required="" autocomplete="off"/>
+                        </div>
+                        <div style="text-align:center;margin-left:180px;margin-top:-48px;">
+                        <button style="padding:1px 30px;" id="btnSubmit" type="submit" class="map_button navbar-custom" >
+                            Submit</button>
+                        </div>
+                        <div class="collapse" id="collapseExample">
+                              <h3><div id= "idText"></div> </h3>
+                    
+                    
+                        </div>
+                    </form>
+      
+      
+      
+      
+      
+    
+    
+    <script>
+                   $(function(){
+            $('#entryForm').on('submit', function(e){
+            e.preventDefault();
+            var days = $('#days').val();
+              $.ajax({
+            type: 'GET',
+            url: '/sendData?id=' + global_id,
+            success: function(result) {
+                 //console.log(result);
+                printStats(result, days);
+               
+            }
+            });
+            
+      
+        });
+                   
+        }); 
+      </script>
+    
+</body>  
+    
+    
+    
+<script type="text/javascript" src="/js/five_crowns_scripts.js" async defer></script>
+    
+<% include ../partials/global_footer.ejs %>
