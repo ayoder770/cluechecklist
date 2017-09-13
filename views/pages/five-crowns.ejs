@@ -9,16 +9,13 @@
 </head>
     
     
-  <body>
+<body>
     
-       <form role="form">
+    <form id="players_form" role="form">
+        
+            <label for="days">Number of Players</label>
+            <input style="width:150px;height:32px;" id="players" type="text" class="form-control" placeholder="ex: 5 (Players)" required="" autocomplete="off"/>
                        
-                       
-                        <div class="form-group">
-                            <label for="days">
-                                View Statistics: Enter Number of Days to Include</label>
-                            <input style="width:150px;height:32px;" id="days" type="text" class="form-control" placeholder="ex: 7 (Days)" required="" autocomplete="off"/>
-                        </div>
                         <div style="text-align:center;margin-left:180px;margin-top:-48px;">
                         <button style="padding:1px 30px;" id="btnSubmit" type="submit" class="map_button navbar-custom" >
                             Submit</button>
@@ -28,7 +25,7 @@
                     
                     
                         </div>
-                    </form>
+    </form>
       
       
       
@@ -38,7 +35,7 @@
     
     <script>
                    $(function(){
-            $('#entryForm').on('submit', function(e){
+            $('#players_form').on('submit', function(e){
             e.preventDefault();
             var days = $('#days').val();
               $.ajax({
