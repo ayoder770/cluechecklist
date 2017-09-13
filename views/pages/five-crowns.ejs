@@ -38,7 +38,9 @@
             $('#players_form').on('submit', function(e){
             e.preventDefault();
             var players = $('#players').val();
-                console.log("hello");
+                console.log("number of players: " + players);
+                document.getElementByID("players_form").style.display = none;
+                /*
               $.ajax({
             type: 'GET',
             url: '/sendData?id=' + global_id,
@@ -49,7 +51,7 @@
                
             }
             });
-            
+            */
       
         });
                    
