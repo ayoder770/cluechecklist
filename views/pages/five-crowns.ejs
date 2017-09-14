@@ -38,6 +38,7 @@
             $('#players_form').on('submit', function(e){
             e.preventDefault();
             var players = $('#players').val();
+                /*
                 console.log("number of players: " + players);
                 document.getElementById("players_form").style.display = "none";
                 
@@ -50,7 +51,7 @@
                 name_form += '</form>';
                 
                  document.getElementById("name_form").innerHTML = name_form;
-                
+                */
                 
               $.ajax({
             type: 'GET',
@@ -58,7 +59,7 @@
                   
             success: function(result) {
                  console.log(result);
-            
+            document.getElementById("name_form").innerHTML = result;
                
             }
             });

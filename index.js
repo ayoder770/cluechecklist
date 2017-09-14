@@ -76,7 +76,17 @@ app.get('/get_name_form', function(request, response) {
  //   response.send(data);
 //  });
     
-    response.send("hello world!!!");
+    
+     new_form = '<form id = "names_form" role = "form">';
+     for(var i=0; i<3; i++){  
+        name_form += '<input class="name_input" id="P_'+(i+1)+'" type="test" placeholder = "Player '+(i+1)+'"required=""/><br>';  
+     }
+     new_form += '<button style="padding:1px 30px;" id="Submit" type="submit">Submit</button>';
+     new_form += '</form>';
+    
+    response.send(new_form);
+    
+    
 });
 
 
