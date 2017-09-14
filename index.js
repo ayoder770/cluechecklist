@@ -86,7 +86,7 @@ app.get('/get_name_form', function(request, response) {
     
    // response.send(new_form);
     
-    res.send(new_form);
+    response.send('<form id = "names_form" role = "form">');
 });
 
 
