@@ -14,20 +14,18 @@
     <form id="players_form" role="form">
         
             <label for="days">Number of Players</label>
-            <input style="width:150px;height:32px;" id="players" type="text" class="form-control" placeholder="ex: 5 (Players)" required="" autocomplete="off"/>
+            <input style="width:150px;height:32px;" id="players" type="text"  placeholder="ex: 5 (Players)" required="" autocomplete="off"/>
                        
-                        <div style="text-align:center;margin-left:180px;margin-top:-48px;">
-                        <button style="padding:1px 30px;" id="btnSubmit" type="submit" class="map_button navbar-custom" >
+                       
+                        <button style="padding:1px 30px;" id="btnSubmit" type="submit">
                             Submit</button>
-                        </div>
-                        <div class="collapse" id="collapseExample">
-                              <h3><div id= "idText"></div> </h3>
-                    
-                    
-                        </div>
+                       
+
     </form>
     
     <div id="name_form"></div>
+    
+    <div id="test"></div>
       
       
       
@@ -47,7 +45,7 @@
                                 for(var i=0; i<players; i++){  
                                name_form += '<input class="name_input" id="P_'+(i+1)+'" type="test" placeholder = "Player '+(i+1)+'"required=""/><br>';  
                                 }
-                name_form += '<button style="padding:1px 30px;" id="btnSubmit" type="submit">Submit</button>';
+                name_form += '<button style="padding:1px 30px;" id="Submit" type="submit">Submit</button>';
                 
                 name_form += '</form>';
                 
@@ -79,8 +77,7 @@ $(function(){
           //  var players = $('#players').val();
                 console.log("Hello");
 
-                
-
+               document.getElementById("name_form").innerHTML = "hello";
       
         });
                    
