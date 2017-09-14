@@ -23,11 +23,32 @@
 
     </form>
     
-    <div id="name_form"></div>
+    <div id="name_form">
+    
+     <form id = "names_form" role = "form">
+                                 
+         <input class="name_input" id="P_1" type="test" placeholder = "Player 1"required=""/><br>
+         <input class="name_input" id="P_2" type="test" placeholder = "Player 2"required=""/><br>
+         <input class="name_input" id="P_3" type="test" placeholder = "Player 3"required=""/><br>
+         <input class="name_input" id="P_4" type="test" placeholder = "Player 4"required=""/><br>
+         <input class="name_input" id="P_5" type="test" placeholder = "Player 5"required=""/><br>
+         <input class="name_input" id="P_6" type="test" placeholder = "Player 6"required=""/><br>
+         <input class="name_input" id="P_7" type="test" placeholder = "Player 7"required=""/><br>
+         <input class="name_input" id="P_8" type="test" placeholder = "Player 8"required=""/><br>
+         <input class="name_input" id="P_9" type="test" placeholder = "Player 9"required=""/><br>
+         <input class="name_input" id="P_10" type="test" placeholder = "Player 10"required=""/><br>
+                                
+        <button style="padding:1px 30px;" id="Submit" type="submit">Submit</button>
+                
+    </form>'
+    
+    
+    
+    </div>
     
     <div id="test"></div>
       
-      
+      <%= code %>
       
       
       
@@ -59,8 +80,8 @@
             dataType: 'html',
                   
             success: function(result) {
-                 console.log(result);
-            document.getElementById("name_form").innerHTML = result;
+          //       console.log(result);
+         //   document.getElementById("name_form").innerHTML = result;
                
             }
             });

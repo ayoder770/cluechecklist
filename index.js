@@ -84,9 +84,9 @@ app.get('/get_name_form', function(request, response) {
      new_form += '<button style="padding:1px 30px;" id="Submit" type="submit">Submit</button>';
      new_form += '</form>';
     
-    response.render(new_form);
+ //   response.render(new_form);
     
- 
+    res.render('/five-crowns', code: new_form);
 });
 
 
