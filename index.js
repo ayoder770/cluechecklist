@@ -60,20 +60,35 @@ app.get('/five-crowns', function(request, response) {
   response.render('pages/five-crowns');
 });
 
-//Map that shows all deviecs and allows 
-app.get('/map', function(request, response) {
-  response.render('pages/map');
+
+
+//Sends data of specific device ID to client side
+app.get('/sendData', function(request, response) {
+    collection.find({'device':request.query.id}).sort({'_id': -1}).limit(100).toArray(function(err, data){
+    response.send(data);
+  });
 });
 
-//Download and installation instructions for new devices
-app.get('/download', function(request,response) {
-  response.render('pages/download');
+
+//Sends data of specific device ID to client side
+app.get('/get_name_form', function(request, response) {
+    collection.find({'device':request.query.id}).sort({'_id': -1}).limit(100).toArray(function(err, data){
+    response.send(data);
+  });
 });
 
-//Allows user to use form to add a new device
-app.get('/newDevice', function(request, response) {
-    response.render('pages/newDevice');
-});
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ///////////////////////////Database Access Routes///////////////////////////

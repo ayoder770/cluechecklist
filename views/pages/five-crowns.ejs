@@ -51,18 +51,19 @@
                 
                  document.getElementById("name_form").innerHTML = name_form;
                 
-                /*
+                
               $.ajax({
             type: 'GET',
-            url: '/sendData?id=' + global_id,
+            url: '/get_name_form',
+                  
             success: function(result) {
                  //console.log(result);
                 printStats(result, days);
-                alert("hello");
+               // alert("hello");
                
             }
             });
-            */
+            
       
         });
                    
