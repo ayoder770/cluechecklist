@@ -74,6 +74,7 @@ app.get('/sendData', function(request, response) {
 
 
 //Sends data of specific device ID to client side
+/*
 app.get('/get_name_form', function(request, response) {
  //   collection.find({'device':request.query.id}).sort({'_id': -1}).limit(100).toArray(function(err, data){
  //   response.send(data);
@@ -93,7 +94,7 @@ app.get('/get_name_form', function(request, response) {
 });
 
 
-
+*/
 
 
 
