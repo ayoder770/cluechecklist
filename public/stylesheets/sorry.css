@@ -12,14 +12,18 @@
     box-shadow: 10px 10px 5px #888888;
 }
 #sorry_card_top{
-    padding-left: 65px;
+    padding: 48px 65px 0px 65px;
+    box-sizing: border-box;
     height: 156px;
 }
 #sorry_card_middle{
     height: 248px;
+    text-align: center;
     
 }
 #sorry_card_bottom{
+    padding-left: 65px;
+    padding-right: 65px;
     height: 156px;
     
 }
