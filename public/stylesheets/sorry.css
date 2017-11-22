@@ -6,7 +6,8 @@
 }
 
 #sorry_card{
-    height: 500px;
+    height: 585px;
     border-radius: 10px;
+    border: 1px solid #888888;
     box-shadow: 10px 10px 5px #888888;
 }
