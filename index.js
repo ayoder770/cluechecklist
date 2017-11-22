@@ -60,7 +60,10 @@ app.get('/five-crowns', function(request, response) {
   response.render('pages/five-crowns');
 });
 
-
+//Sorry Card Deck
+app.get('/sorry', function(request, response) {
+  response.render('pages/sorry');
+});
 
 //Sends data of specific device ID to client side
 app.get('/sendData', function(request, response) {
@@ -86,7 +89,7 @@ app.get('/get_name_form', function(request, response) {
     
  //   response.render(new_form);
     
-    res.render('/five-crowns', code: new_form);
+    response.render('/five-crowns', code: new_form);
 });
 
 
