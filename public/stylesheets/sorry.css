@@ -6,17 +6,20 @@
 }
 
 #sorry_card{
-    height: 525px;
+    height: 560px;
     border-radius: 10px;
     border: 1px solid #888888;
     box-shadow: 10px 10px 5px #888888;
 }
 #sorry_card_top{
-    
+    padding-left: 65px;
+    height: 156px;
 }
 #sorry_card_middle{
+    height: 248px;
     
 }
 #sorry_card_bottom{
+    height: 156px;
     
 }
