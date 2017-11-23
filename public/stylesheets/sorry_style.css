@@ -36,7 +36,10 @@
     width: 100%;
     padding: 0px 38px 38px 38px;
     height: 156px;
-    
+    box-sizing: border-box;
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Safari */
+    transform: rotate(180deg);
 }
 #sorry_star{
     height: 100%;
