@@ -23,7 +23,10 @@
     margin-top: 156px;
     text-align: center;
     height: 248px;
-    width: 100%
+    width: 100%;
+    background-image:url('sorry_star.png');
+    background-size: contain;
+    background-position: center;
     
 }
 #sorry_card_bottom{
