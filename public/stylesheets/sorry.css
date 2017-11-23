@@ -24,7 +24,7 @@
     text-align: center;
     height: 248px;
     width: 100%;
-    background-image:url('sorry_star.png');
+    background-image:url('https://cluechecklist.herokuapp.com/public/sorry_star.png');
     background-size: contain;
     background-position: center;
     
