@@ -1,30 +1,35 @@
 #deck_cont{
     margin: auto;
     width: 95%;
-    max-width: 400px;
+    max-width: 350px;
     position: relative;
 }
 
 #sorry_card{
-    height: 640px;
+    height: 560px;
     border-radius: 10px;
     border: 1px solid #888888;
     box-shadow: 10px 10px 5px #888888;
 }
 #sorry_card_top{
-    padding: 32px 32px 0px 32px;
+    position: absolute;
+    top: 0px;
+    padding: 38px 38px 0px 38px;
     box-sizing: border-box;
-    height: 180px;
+    height: 156px;
 }
 #sorry_card_middle{
-    height: 280px;
+    margin-top: 156px;
     text-align: center;
     
 }
 #sorry_card_bottom{
+    position: absolute;
+    bottom: 0px;
+    
     padding-left: 65px;
     padding-right: 65px;
-    height: 180px;
+    height: 156px;
     
 }
 #sorry_star{
