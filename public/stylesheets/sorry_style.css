@@ -27,6 +27,7 @@
     background-image:url('sorry_star.png');
     background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     
 }
 #sorry_card_bottom{
@@ -41,5 +42,16 @@
 #sorry_star{
     height: 100%;
     margin: auto;
+    
+}
+
+.card_number{
+    
+}
+.card_desc{
+    
+}
+
+.big_number{
     
 }
