@@ -5,12 +5,12 @@ var deck = [1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 50]
 function draw_next_card(){
     var x = Math.floor((Math.random() * 11) + 0);
 
-    if(x == 11){
+    if(x == 10){
         document.getElementById("top_numb").innerHTML = "SORRY!";
         document.getElementById("bot_numb").innerHTML = "SORRY!"
     
-        document.getElementById("top_desc").innerHTML = desc[11];
-        document.getElementById("bot_desc").innerHTML = desc[11];   
+        document.getElementById("top_desc").innerHTML = desc[10];
+        document.getElementById("bot_desc").innerHTML = desc[10];   
     } else{
         document.getElementById("top_numb").innerHTML = deck[x];
         document.getElementById("big_numb").innerHTML = deck[x];
