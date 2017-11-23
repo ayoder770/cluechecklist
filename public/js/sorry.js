@@ -7,9 +7,9 @@ function draw_next_card(){
     document.getElementById("x").innerHTML = x;
 
     if(x == 10){
-        document.getElementById("top_numb").innerHTML = "SORRY!";
+        document.getElementById("top_numb").innerHTML = "<div style='text-align:center;'>SORRY!</div>";
         document.getElementById("big_numb").innerHTML = "";
-        document.getElementById("bot_numb").innerHTML = "SORRY!"
+        document.getElementById("bot_numb").innerHTML = "<div style='text-align:center;'>SORRY!</div>"
     
         document.getElementById("top_desc").innerHTML = desc[10];
         document.getElementById("bot_desc").innerHTML = desc[10];   
