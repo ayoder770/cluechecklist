@@ -73,9 +73,12 @@
     border-radius: 5px;
     color: #000000;
     margin: auto;
+    margin-top: 25px;
+    padding: 10px 0px;
+    box-sizing: border-box;
 }
 #next_button:hover{
-    color: #000000;
-    background-color: #FFFFFF;
+    color: #FFFFFF;
+    background-color: #000000;
     cursor: pointer;
 }

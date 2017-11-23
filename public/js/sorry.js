@@ -12,5 +12,5 @@
  
 function draw_next_card(){
     
-    
+    alert("hello");
 }
