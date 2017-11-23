@@ -10,3 +10,7 @@
  var desc_12 = "Move forward 12.";
  var  desc_S = "Move from Start and switch places with an opponent, who you bump back to start.";
  
+function draw_next_card(){
+    
+    
+}
