@@ -8,9 +8,17 @@
  var desc_10 = "Move forward 10 or move backward 1.";
  var desc_11 = "Move forward 11 or change places with an opponent.";
  var desc_12 = "Move forward 12.";
- var  desc_S = "Move from Start and switch places with an opponent, who you bump back to start.";
+ var  desc_50 = "Move from Start and switch places with an opponent, who you bump back to start.";
+
+var deck = [1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 50]
  
 function draw_next_card(){
+    var x = Math.floor((Math.random() * 11) + 0);
+   var c = deck[x];
+    document.getElementById("top_numb").innerHTML = c;
+    document.getElementById("big_numb").innerHTML = c;
+    document.getElementById("bot_numb").innerHTML = c;
     
-    alert("hello");
+    document.getElementById("top_desc").innerHTML = "desc_"+c;
+    document.getElementById("bot_desc").innerHTML = "desc_"+c;
 }
