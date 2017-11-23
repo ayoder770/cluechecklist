@@ -21,4 +21,6 @@ function draw_next_card(){
         document.getElementById("top_desc").innerHTML = desc[x];
         document.getElementById("bot_desc").innerHTML = desc[x];
     }
+    
+    $("#sorry_card").slideDown();
 }
