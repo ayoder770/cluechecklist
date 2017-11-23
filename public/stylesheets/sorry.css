@@ -17,16 +17,19 @@
     padding: 38px 38px 0px 38px;
     box-sizing: border-box;
     height: 156px;
+    width: 100%;
 }
 #sorry_card_middle{
     margin-top: 156px;
     text-align: center;
+    height: 248px;
+    width: 100%
     
 }
 #sorry_card_bottom{
     position: absolute;
     bottom: 0px;
-    
+    width: 100%;
     padding-left: 65px;
     padding-right: 65px;
     height: 156px;
