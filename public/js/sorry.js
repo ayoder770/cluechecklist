@@ -10,8 +10,8 @@ function draw_next_card(){
         document.getElementById("top_numb").innerHTML = "SORRY!";
         document.getElementById("bot_numb").innerHTML = "SORRY!"
     
-        document.getElementById("top_desc").innerHTML = desc[11];
-        document.getElementById("bot_desc").innerHTML = desc[11];   
+        document.getElementById("top_desc").innerHTML = desc[10];
+        document.getElementById("bot_desc").innerHTML = desc[10];   
     } else{
         document.getElementById("top_numb").innerHTML = deck[x];
         document.getElementById("big_numb").innerHTML = deck[x];
