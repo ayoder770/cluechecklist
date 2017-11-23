@@ -20,6 +20,6 @@ function draw_next_card(){
     document.getElementById("big_numb").innerHTML = c;
     document.getElementById("bot_numb").innerHTML = c;
     
-    document.getElementById("top_desc").innerHTML = next;
-    document.getElementById("bot_desc").innerHTML = next;
+    document.getElementById("top_desc").innerHTML = 'desc_'+c;
+    document.getElementById("bot_desc").innerHTML = 'desc_'+c;
 }
