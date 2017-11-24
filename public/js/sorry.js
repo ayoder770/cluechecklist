@@ -5,22 +5,24 @@ var  desc= [ "Move from Start or move forward 1.", "Move from Start or move forw
 var one_deck = 45;
 var count_up = 0;
 var deck_count = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ];
-//1-5, all else - 4...
+//1 - 5, all else - 4...
  
 
 function draw_next_card(){
-    document.getElementById("card").classList.toggle('flipped');
-    setTimeout(changeText, 300);
+    if(count_up === 0){
+         document.getElementById("card").classList.toggle('flipped_half'); 
+         setTimeout(changeText, 300);    
+     } else{
+        document.getElementById("card").classList.toggle('flipped');
+        setTimeout(changeText, 300);
+     }
+     count_up++;
 }
 
 
  function changeText(){
     var x = Math.floor((Math.random() * 11) + 0);
      
-     if(count_up === 0){
-         
-     }
-
     if(x == (deck.length - 1)){
         document.getElementById("top_numb").innerHTML = "<div class='sorry'>SORRY!</div>";
         document.getElementById("big_numb").innerHTML = "";
