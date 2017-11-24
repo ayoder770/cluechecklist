@@ -9,7 +9,7 @@ function draw_next_card(){
     if(deck.length === -1){
          document.getElementById("card").classList.toggle('flipped_half'); 
          setTimeout(changeText, 300);    
-     } else if( deck.length < 45 && deck.length > 0 ){
+     } else if( deck.length > 0 ){
         document.getElementById("card").classList.toggle('flipped');
         setTimeout(changeText, 300);
      } else if( deck.length === 0 ){
