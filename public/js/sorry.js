@@ -8,6 +8,8 @@ function draw_next_card(){
 var check = document.getElementById("card").classList.contains('flipped');
     if(check === false){
         document.getElementById("card").className = "flipped";
+    } else if(check === true){
+        document.getElementById("card").className.remove = "flipped";
     }
 
 
