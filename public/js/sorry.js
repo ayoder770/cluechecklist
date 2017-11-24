@@ -16,6 +16,10 @@ function draw_next_card(){
 
  function changeText(){
     var x = Math.floor((Math.random() * 11) + 0);
+     
+     if(count_up === 0){
+         
+     }
 
     if(x == (deck.length - 1)){
         document.getElementById("top_numb").innerHTML = "<div style='text-align:center;'>SORRY!</div>";

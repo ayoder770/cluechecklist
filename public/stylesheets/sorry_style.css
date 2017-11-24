@@ -128,3 +128,14 @@ body{
     background-color: #000000;
     cursor: pointer;
 }
+
+@media screen and (max-width: 480px){
+    #sorry_whole_page{width: 275px;height: 440px;perspective: 440px;}
+    #sorry_card_top{padding: 30px 30px 0px 30px;height: 123px;}
+    #sorry_card_middle{margin-top: 123px;height: 194px;}
+    #sorry_card_bottom{padding: 30px 30px 0px 30px;height: 123px;}
+    
+    .card_number{font-size: 55px;line-height: 55px;}
+    .card_desc{margin: 0px;padding: 5px 20px 0px 20px;font-size: 18px;}
+    .big_number{font-size: 200px;}
+}
