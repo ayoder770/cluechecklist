@@ -4,18 +4,8 @@ var deck = [1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 50]
  
 function draw_next_card(){
     var x = Math.floor((Math.random() * 11) + 0);
-   
-    id="card";
-    
- if (jQuery(id).hasClass('flipped')) {
-        jQuery(id).removeClass('flipped');
-       
-    } else  {
-       
-        jQuery(id).addClass('flipped');
-       
-    }
 
+document.getElementById("card").className = "flipped";
 
 
     if(x == (deck.length - 1)){
