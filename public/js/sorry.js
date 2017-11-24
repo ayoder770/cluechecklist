@@ -22,5 +22,5 @@ function draw_next_card(){
         document.getElementById("bot_desc").innerHTML = desc[x];
     }
     
-    $("#sorry_card").slideDown();
+    document.getElementById("card").addClass('flipped');
 }
