@@ -22,9 +22,9 @@ function draw_next_card(){
      }
 
     if(x == (deck.length - 1)){
-        document.getElementById("top_numb").innerHTML = "<div style='text-align:center;'>SORRY!</div>";
+        document.getElementById("top_numb").innerHTML = "<div class='sorry'>SORRY!</div>";
         document.getElementById("big_numb").innerHTML = "";
-        document.getElementById("bot_numb").innerHTML = "<div style='text-align:center;'>SORRY!</div>"
+        document.getElementById("bot_numb").innerHTML = "<div class='sorry'>SORRY!</div>"
     
         document.getElementById("top_desc").innerHTML = desc[deck.length - 1];
         document.getElementById("bot_desc").innerHTML = desc[deck.length - 1];   
