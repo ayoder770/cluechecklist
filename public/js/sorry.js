@@ -3,18 +3,10 @@
 var deck = [1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 50]
  
 function draw_next_card(){
-    var x = Math.floor((Math.random() * 11) + 0);
+  //  var x = Math.floor((Math.random() * 11) + 0);
 
     document.getElementById("card").classList.toggle('flipped');
-  /*  
-var check = document.getElementById("card").classList.contains('flipped');
-    if(check === false){
-        document.getElementById("card").className = "flipped";
-    } else if(check === true){
-        document.getElementById("card").className.remove = "flipped";
-    }
-
-*/
+/*
     if(x == (deck.length - 1)){
         document.getElementById("top_numb").innerHTML = "<div style='text-align:center;'>SORRY!</div>";
         document.getElementById("big_numb").innerHTML = "";
@@ -31,8 +23,37 @@ var check = document.getElementById("card").classList.contains('flipped');
         document.getElementById("bot_desc").innerHTML = desc[x];
     }
     
-   
+   */
+    changeText();
 }
+
+
+ function changeText(){
+        var x = Math.floor((Math.random() * 11) + 0);
+
+   
+
+    if(x == (deck.length - 1)){
+        document.getElementById("top_numb").innerHTML = "<div style='text-align:center;'>SORRY!</div>";
+        document.getElementById("big_numb").innerHTML = "";
+        document.getElementById("bot_numb").innerHTML = "<div style='text-align:center;'>SORRY!</div>"
+    
+        document.getElementById("top_desc").innerHTML = desc[deck.length - 1];
+        document.getElementById("bot_desc").innerHTML = desc[deck.length - 1];   
+    } else{
+        document.getElementById("top_numb").innerHTML = deck[x];
+        document.getElementById("big_numb").innerHTML = deck[x];
+        document.getElementById("bot_numb").innerHTML = deck[x];
+    
+        document.getElementById("top_desc").innerHTML = desc[x];
+        document.getElementById("bot_desc").innerHTML = desc[x];
+    }
+      }
+
+      setTimeout(changeText, 500);
+
+
+
 
 
 function draw_first_card(){
