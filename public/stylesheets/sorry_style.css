@@ -21,7 +21,7 @@
   height: 100%;
   position: absolute;
   transform-style: preserve-3d;
-  transition: transform 1s;
+  transition: transform 2s;
     top: 100px;
 }
 
@@ -121,7 +121,7 @@
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 10px;
-  transform: rotateY( 360deg );
+  transform: rotateY( 180deg );
 }
 
 #card.flipped {
