@@ -10,7 +10,7 @@ function draw_next_card(){
  if (jQuery(id).hasClass('flipped')) {
         jQuery(id).removeClass('flipped');
        
-    } else if !(jQuery(id).hasClass('flipped')) {
+    } else  {
        
         jQuery(id).addClass('flipped');
        
