@@ -29,8 +29,8 @@ function draw_next_card(){
         document.getElementById("big_numb").innerHTML = "";
         document.getElementById("bot_numb").innerHTML = "<div class='sorry'>SORRY!</div>"
     
-        document.getElementById("top_desc").innerHTML = desc[12];
-        document.getElementById("bot_desc").innerHTML = desc[12];   
+        document.getElementById("top_desc").innerHTML = desc[13];
+        document.getElementById("bot_desc").innerHTML = desc[13];   
     } else{
         document.getElementById("top_numb").innerHTML = deck[x];
         document.getElementById("big_numb").innerHTML = deck[x];
@@ -51,8 +51,6 @@ function update_deck(index){
 }
 
 function shuffle_deck(){
-    alert("DECK IS EMPTY");
-    var deck = [1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1];
-    alert("resume");
-    
+   // alert("DECK IS EMPTY...RESHUFFLE");
+     deck = [1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1];
 }
