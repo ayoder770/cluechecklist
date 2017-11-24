@@ -2,8 +2,9 @@ var deck = [1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 50];
 
 var  desc= [ "Move from Start or move forward 1.", "Move from Start or move forward 2. DRAW AGAIN", "Move forward 3.", "Move backward 4.", "Move forward 5.", "Move forward 7 or split between two pawns.", "Move forward 8.", "Move forward 10 or move backward 1.", "Move forward 11 or change places with an opponent.", "Move forward 12.", "Move from Start and switch places with an opponent, who you bump back to start." ];
 
-
-var deck_count = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0 ];
+var one_deck = 45;
+var count_up = 0;
+var deck_count = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ];
 //1-5, all else - 4...
  
 

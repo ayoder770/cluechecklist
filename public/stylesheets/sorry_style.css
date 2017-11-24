@@ -54,6 +54,10 @@ body{
   transform: rotateY( 360deg );
 }
 
+#card.flipped_half {
+  transform: rotateY( 180deg );
+}
+
 
 #sorry_card_top{
     position: absolute;
