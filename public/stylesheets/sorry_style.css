@@ -24,12 +24,6 @@ body{
   border-radius: 10px;
 }
 
-#card_front{
-    background-color: #ffffff;
-    box-shadow: 10px 10px 5px #888888;
-    position: relative;
-}
-
 #card figure {
   margin: 0;
   display: block;
@@ -39,6 +33,12 @@ body{
   backface-visibility: hidden;
 }
 
+#card_front{
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #888888;
+}
 
 #card_back {
   background-image:url('sorry_card.jpg');
