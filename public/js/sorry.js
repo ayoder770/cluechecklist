@@ -24,7 +24,7 @@ function draw_next_card(){
     }
     
    */
-    changeText();
+     setTimeout(changeText, 500);
 }
 
 
