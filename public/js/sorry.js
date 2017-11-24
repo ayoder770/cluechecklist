@@ -15,6 +15,8 @@ function draw_next_card(){
      } else if( deck.length < 45 && deck.length > 0 ){
         document.getElementById("card").classList.toggle('flipped');
         setTimeout(changeText, 300);
+     } else if( deck.length === 0 ){
+         shuffle_deck();
      }
 }
 
@@ -48,10 +50,10 @@ function draw_next_card(){
 function update_deck(index){
     
     deck.splice(index, 1);
-    alert(deck.length);
+  //  alert(deck.length);
 }
 
 function shuffle_deck(){
-    
+    alert("DECK IS EMPTY");
     
 }
