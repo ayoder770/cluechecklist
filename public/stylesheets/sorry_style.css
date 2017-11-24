@@ -1,8 +1,10 @@
-body{margin: 0px;
-height: 100vh; background-image:url('table_top.jpg');
+body{
+    margin: 0px;
+    height: 100vh; background-image:url('table_top.jpg');
     background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;}
+    background-repeat: no-repeat;
+}
 
 #sorry_whole_page{
     width: 350px;
@@ -19,11 +21,12 @@ height: 100vh; background-image:url('table_top.jpg');
   transform-style: preserve-3d;
   transition: transform 1s;
   top: 50px;
+    border-radius: 10px;
 }
 
 #sorry_card{
-    height: 560px;
-    border-radius: 10px;
+  /*  height: 560px;
+    border-radius: 10px;*/
     border: 1px solid #888888;
     box-shadow: 10px 10px 5px #888888;
     position: relative;
