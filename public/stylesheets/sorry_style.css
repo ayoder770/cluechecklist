@@ -1,4 +1,8 @@
-body{margin: 0px;}
+body{margin: 0px;
+height: 100vh; background-image:url('table_top.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;}
 
 #sorry_whole_page{
     width: 350px;
