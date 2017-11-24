@@ -39,6 +39,7 @@ body{
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 10px 10px 5px #888888;
+    transform: rotateY( 180deg );
 }
 
 #card_back {
@@ -47,7 +48,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 10px;
-  transform: rotateY( 180deg );
+  /*transform: rotateY( 180deg );*/
 }
 
 #card.flipped {
