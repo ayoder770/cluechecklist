@@ -5,7 +5,7 @@ var deck = [1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 50]
 function draw_next_card(){
     var x = Math.floor((Math.random() * 11) + 0);
    
-
+$("#card").addClass('flipped');
     if(x == (deck.length - 1)){
         document.getElementById("top_numb").innerHTML = "<div style='text-align:center;'>SORRY!</div>";
         document.getElementById("big_numb").innerHTML = "";
@@ -22,5 +22,5 @@ function draw_next_card(){
         document.getElementById("bot_desc").innerHTML = desc[x];
     }
     
-    $("card").addClass('flipped');
+   
 }
