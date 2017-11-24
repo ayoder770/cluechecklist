@@ -9,7 +9,7 @@ var deck_count = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ];
  
 
 function draw_next_card(){
-    if(count_up === 0){
+    if(count_up === -1){
          document.getElementById("card").classList.toggle('flipped_half'); 
          setTimeout(changeText, 300);    
      } else{

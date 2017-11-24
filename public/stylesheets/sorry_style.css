@@ -48,7 +48,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 10px;
-  /*transform: rotateY( 180deg );*/
+    transform: rotateY( 180deg );
 }
 
 #card.flipped {
