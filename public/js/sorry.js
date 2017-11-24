@@ -3,28 +3,11 @@
 var deck = [1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 50]
  
 function draw_next_card(){
-  //  var x = Math.floor((Math.random() * 11) + 0);
+ 
 
     document.getElementById("card").classList.toggle('flipped');
-/*
-    if(x == (deck.length - 1)){
-        document.getElementById("top_numb").innerHTML = "<div style='text-align:center;'>SORRY!</div>";
-        document.getElementById("big_numb").innerHTML = "";
-        document.getElementById("bot_numb").innerHTML = "<div style='text-align:center;'>SORRY!</div>"
-    
-        document.getElementById("top_desc").innerHTML = desc[deck.length - 1];
-        document.getElementById("bot_desc").innerHTML = desc[deck.length - 1];   
-    } else{
-        document.getElementById("top_numb").innerHTML = deck[x];
-        document.getElementById("big_numb").innerHTML = deck[x];
-        document.getElementById("bot_numb").innerHTML = deck[x];
-    
-        document.getElementById("top_desc").innerHTML = desc[x];
-        document.getElementById("bot_desc").innerHTML = desc[x];
-    }
-    
-   */
-     setTimeout(changeText, 500);
+
+     setTimeout(changeText, 300);
 }
 
 
@@ -48,33 +31,4 @@ function draw_next_card(){
         document.getElementById("top_desc").innerHTML = desc[x];
         document.getElementById("bot_desc").innerHTML = desc[x];
     }
-      }
-
-      setTimeout(changeText, 500);
-
-
-
-
-
-function draw_first_card(){
-    var x = Math.floor((Math.random() * 11) + 0);
-   
-
-    if(x == (deck.length - 1)){
-        document.getElementById("top_numb").innerHTML = "<div style='text-align:center;'>SORRY!</div>";
-        document.getElementById("big_numb").innerHTML = "";
-        document.getElementById("bot_numb").innerHTML = "<div style='text-align:center;'>SORRY!</div>"
-    
-        document.getElementById("top_desc").innerHTML = desc[deck.length - 1];
-        document.getElementById("bot_desc").innerHTML = desc[deck.length - 1];   
-    } else{
-        document.getElementById("top_numb").innerHTML = deck[x];
-        document.getElementById("big_numb").innerHTML = deck[x];
-        document.getElementById("bot_numb").innerHTML = deck[x];
-    
-        document.getElementById("top_desc").innerHTML = desc[x];
-        document.getElementById("bot_desc").innerHTML = desc[x];
-    }
-    
-   
 }

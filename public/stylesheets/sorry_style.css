@@ -2,7 +2,7 @@
     width: 350px;
     height: 560px;
     position: relative;
-    perspective: 800px;
+    perspective: 560px;
     margin: auto;
 }
 
@@ -22,7 +22,7 @@
   position: absolute;
   transform-style: preserve-3d;
   transition: transform 1s;
-    top: 100px;
+    top: 10px;
 }
 
 #sorry_card{
