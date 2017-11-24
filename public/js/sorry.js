@@ -24,3 +24,27 @@ document.getElementById("card").className = "flipped"
     
    
 }
+
+
+function draw_first_card(){
+    var x = Math.floor((Math.random() * 11) + 0);
+   
+
+    if(x == (deck.length - 1)){
+        document.getElementById("top_numb").innerHTML = "<div style='text-align:center;'>SORRY!</div>";
+        document.getElementById("big_numb").innerHTML = "";
+        document.getElementById("bot_numb").innerHTML = "<div style='text-align:center;'>SORRY!</div>"
+    
+        document.getElementById("top_desc").innerHTML = desc[deck.length - 1];
+        document.getElementById("bot_desc").innerHTML = desc[deck.length - 1];   
+    } else{
+        document.getElementById("top_numb").innerHTML = deck[x];
+        document.getElementById("big_numb").innerHTML = deck[x];
+        document.getElementById("bot_numb").innerHTML = deck[x];
+    
+        document.getElementById("top_desc").innerHTML = desc[x];
+        document.getElementById("bot_desc").innerHTML = desc[x];
+    }
+    
+   
+}
