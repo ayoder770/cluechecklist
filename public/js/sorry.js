@@ -22,6 +22,9 @@ function draw_next_card(){
  function changeText(){
     var x = Math.floor((Math.random() * 44) + 0);
      
+     
+
+     
     if( deck[x] === 50 ){
         document.getElementById("top_numb").innerHTML = "<div class='sorry'>SORRY!</div>";
         document.getElementById("big_numb").innerHTML = "";
@@ -44,7 +47,7 @@ function draw_next_card(){
 
 function update_deck(index){
     
-    deck.splice(x, 1);
+    deck.splice(index, 1);
     alert(deck.length);
 }
 
