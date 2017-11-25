@@ -28,6 +28,7 @@ body{
     position: relative;
     width: 10%;
     border: 1px solid #000000;
+    box-sizing: border-box;
 }
 .player{
     position: relative;
@@ -36,6 +37,7 @@ body{
     text-align: center;
     padding: 5px 0px;
     font-weight: bold;
+    box-sizing: border-box;
 }
 .score_cont{
     display: block;
