@@ -9,7 +9,8 @@ $(function(){
                  var P4_score = $("P_4").val();
                  var P5_score = $("P_5").val();
          
-             //   console.log("Hello");
+alert(P1_score);
+                alert(P2_score);
 
                document.getElementById("P1").innerHTML = "Andrew";
                 
