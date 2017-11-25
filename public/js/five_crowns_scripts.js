@@ -29,8 +29,6 @@ $(function(){
                      var s_old_total;
                      s_old_total = 'p' + (i+1) + "_" + (this_round - 1) + "_u";
                      
-                     var
-                     
                      
                      document.getElementById(s_upd_cell).innerHTML = Number(document.getElementById(s_get).value) + Number(document.getElementById(s_old_total).innerHTML);
                  }   
