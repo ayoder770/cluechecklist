@@ -9,6 +9,8 @@ function draw_next_card(){
        //  document.getElementById("card").classList.remove('flipped_half');
      } else if( ( deck.length > 0 ) && ( deck.length < 45 ) ){
         document.getElementById("card").classList.remove('flipped_half');
+         document.getElementById("card_front").style.transform = "rotate3d( 0deg )";
+         document.getElementById("card_back").style.transform = "rotate3d( 180deg )";
         document.getElementById("card").classList.toggle('flipped');
         setTimeout(changeText, 300);
      } else if( deck.length === 0 ){
@@ -43,5 +45,5 @@ function draw_next_card(){
 function shuffle_deck(){
   //  alert("DECK IS EMPTY...RESHUFFLE");
      deck = [1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1];
-     document.getElementById("rs_button").stle.display = "none";
+     document.getElementById("rs_button").style.display = "none";
 }
