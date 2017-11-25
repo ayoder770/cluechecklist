@@ -9,11 +9,11 @@ $(function(){
                  var P4_score = $("P_4").val();
                  var P5_score = $("P_5").val();
          
-                console.log("Hello");
+             //   console.log("Hello");
 
                document.getElementById("P1").innerHTML = "Andrew";
                 
-                for(var i=0 i<5 i++){
+                for(var i=0; i<5; i++){
                     var one = "#p";
                     var s_new = one + (i+1) + "_" + this_round + "_n";
                     var s_upd = one + (i+1) + "_" + this_round + "_u";
