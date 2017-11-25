@@ -9,8 +9,8 @@ $(function(){
                  var P4_score = document.getElementById("P_4").value;
                  var P5_score = document.getElementById("P_5").value;
          
-alert(P1_score);
-                alert(P2_score);
+//alert(P1_score);
+              //  alert(P2_score);
 
                document.getElementById("P1").innerHTML = "Andrew";
                 
@@ -21,7 +21,7 @@ alert(P1_score);
                     alert(s_new);
                     
                     
-                    document.getElementById(s_new).innerHTML = P+(i+1)+_score;
+                    document.getElementById(s_new).innerHTML = "Hello";
                     
                     
                   //  $(s_new).innerHTML = "P"+(i+1)+"_score";
