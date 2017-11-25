@@ -45,5 +45,7 @@ function draw_next_card(){
 function shuffle_deck(){
   //  alert("DECK IS EMPTY...RESHUFFLE");
      deck = [1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1];
-     document.getElementById("rs_button").style.display = "none";
+     document.getElementById("rs_overlay").style.display = "none";
+     document.getElementById("card_front").style.transform = "rotateY( 1800deg )";
+         document.getElementById("card_back").style.transform = "rotateY( 0deg )";
 }
