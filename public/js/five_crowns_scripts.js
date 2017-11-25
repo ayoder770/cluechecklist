@@ -15,12 +15,13 @@ $(function(){
                document.getElementById("P1").innerHTML = "Andrew";
                 
                 for(var i=0; i<5; i++){
-                    var one = "p";
-                    var s_new = one + (i+1) + "_" + this_round + "_n";
-                    var s_upd = one + (i+1) + "_" + this_round + "_u";
+                   
+                    var s_new;
+                    s_new = 'p' + (i+1) + '_' + this_round + '_n';
+                    var s_upd = 'p' + (i+1) + "_" + this_round + "_u";
                     alert(s_new);
                     
-                    
+                
                     document.getElementById(s_new).innerHTML = "Hello";
                     
                     
