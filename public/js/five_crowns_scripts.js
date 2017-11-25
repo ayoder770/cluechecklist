@@ -23,9 +23,9 @@ $(function(){
                     
                     
                     var s_get;
-                    s_get_value = 'P'+(i+1)+'_score';
+                    s_get = 'P'+(i+1);
                 
-                    document.getElementById(s_new).innerHTML = document.getElementById(s_get_value).value;
+                    document.getElementById(s_new).innerHTML = document.getElementById(s_get).value;
                     
                     
                   //  $(s_new).innerHTML = "P"+(i+1)+"_score";
