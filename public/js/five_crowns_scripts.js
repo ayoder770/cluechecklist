@@ -19,10 +19,13 @@ $(function(){
                     var s_new;
                     s_new = 'p' + (i+1) + '_' + this_round + '_n';
                     var s_upd = 'p' + (i+1) + "_" + this_round + "_u";
-                    alert(s_new);
+                 //   alert(s_new);
                     
+                    
+                    var s_get;
+                    s_get_value = 'P'+(i+1)+'_score';
                 
-                    document.getElementById(s_new).innerHTML = "Hello";
+                    document.getElementById(s_new).innerHTML = s_get_value;
                     
                     
                   //  $(s_new).innerHTML = "P"+(i+1)+"_score";
