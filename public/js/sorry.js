@@ -6,12 +6,13 @@ function draw_next_card(){
     if(deck.length === 45){
          document.getElementById("card").className = "flipped_half"; 
          setTimeout(changeText, 300);
-         document.getElementById("card").classList.remove('flipped_half');
+       //  document.getElementById("card").classList.remove('flipped_half');
      } else if( ( deck.length > 0 ) && ( deck.length < 45 ) ){
         document.getElementById("card").classList.toggle('flipped');
         setTimeout(changeText, 300);
      } else if( deck.length === 0 ){
-         shuffle_deck();
+         document.getElementById("rs_button").stle.display = "block";
+         //shuffle_deck();
      }
 }
 
@@ -39,6 +40,7 @@ function draw_next_card(){
 
 
 function shuffle_deck(){
-    alert("DECK IS EMPTY...RESHUFFLE");
+  //  alert("DECK IS EMPTY...RESHUFFLE");
      deck = [1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1];
+    document.getElementById("rs_button").stle.display = "none";
 }
