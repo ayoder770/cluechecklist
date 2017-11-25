@@ -62,7 +62,7 @@ body{
 }
 
 #card.flipped {
-  transform: rotateY( 360deg );
+  transform: rotateY( 360deg )!important;
 }
 
 #card.flipped_half {
