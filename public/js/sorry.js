@@ -9,8 +9,8 @@ function draw_next_card(){
        //  document.getElementById("card").classList.remove('flipped_half');
      } else if( ( deck.length > 0 ) && ( deck.length < 45 ) ){
         document.getElementById("card").classList.remove('flipped_half');
-         document.getElementById("card_front").style.transform = "rotate3d( 0deg )";
-         document.getElementById("card_back").style.transform = "rotate3d( 180deg )";
+         document.getElementById("card_front").style.transform = "rotateY( 0deg )";
+         document.getElementById("card_back").style.transform = "rotateY( 180deg )";
         document.getElementById("card").classList.toggle('flipped');
         setTimeout(changeText, 300);
      } else if( deck.length === 0 ){
