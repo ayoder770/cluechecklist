@@ -9,7 +9,6 @@ body{
     height: 100vh;
     width: 100%;
     margin: 0px;
-    box-sizing: border-box;
 }
 
 #fc_whole_page{
@@ -42,19 +41,22 @@ body{
     display: block;
     width: 18%;
     position: relative;
+    
 }
 .fc_round{
     width: 10%;
     position: relative;
-    height: 30px;
+    height: 50px;
     border: 1px solid #000000;
     box-sizing: border-box;
 }
 .this_score{
+    height: 25px;
     border: 1px solid #000000;
     box-sizing: border-box;
 }
 .this_update{
+    height: 25px;
     border: 1px solid #000000;
     font-weight: bold;
     box-sizing: border-box;
