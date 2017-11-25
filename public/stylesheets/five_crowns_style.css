@@ -5,6 +5,19 @@
     border-radius: 4px;
 } 
 
+body{
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+}
+
+#fc_whole_page{
+    width: 95%;
+    position: relative;
+    margin: auto;
+    max-width: 500px;
+}
+
 .full_row{
     position: relative;
     width: 100%;
