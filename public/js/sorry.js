@@ -4,7 +4,8 @@ var  desc= [ "NULL", "Move from Start or move forward 1.", "Move from Start or m
 
 function draw_next_card(){
     if(deck.length === 45){
-         document.getElementById("card").classList.toggle('flipped_half'); 
+         document.getElementById("card").classList.className('flipped_half'); 
+         document.getElementById("card").classList.remove('flipped_half'); 
          setTimeout(changeText, 300);    
      } else if( ( deck.length > 0 ) && ( deck.length < 45 ) ){
         document.getElementById("card").classList.toggle('flipped');
