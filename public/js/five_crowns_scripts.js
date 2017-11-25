@@ -35,3 +35,10 @@ $(function(){
         this_round++;
     });                 
 }); 
+
+
+
+function enter_scores(){
+    
+    
+}
