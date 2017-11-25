@@ -3,11 +3,11 @@
 $(function(){
             $('#score_form').on('submit', function(e){
             e.preventDefault();
-                 var P1_score = document.getElementById("P_1").value;
-                 var P2_score = document.getElementById("P_2").value;
-                 var P3_score = document.getElementById("P_3").value;
-                 var P4_score = document.getElementById("P_4").value;
-                 var P5_score = document.getElementById("P_5").value;
+              //   var P1_score = document.getElementById("P_1").value;
+              //   var P2_score = document.getElementById("P_2").value;
+              //   var P3_score = document.getElementById("P_3").value;
+              //   var P4_score = document.getElementById("P_4").value;
+              //   var P5_score = document.getElementById("P_5").value;
          
 //alert(P1_score);
               //  alert(P2_score);
@@ -25,7 +25,7 @@ $(function(){
                     var s_get;
                     s_get_value = 'P'+(i+1)+'_score';
                 
-                    document.getElementById(s_new).innerHTML = s_get_value;
+                    document.getElementById(s_new).innerHTML = document.getElementById(s_get_value).value;
                     
                     
                   //  $(s_new).innerHTML = "P"+(i+1)+"_score";
