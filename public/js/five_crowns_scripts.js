@@ -20,7 +20,7 @@ $(function(){
                     alert(s_new);
                     
                     
-                    document.getElementById(s_new).innerHTML = "P"+(i+1)+"_score";
+                    document.getElementById(s_new).innerHTML = P+(i+1)+_score;
                     
                     
                   //  $(s_new).innerHTML = "P"+(i+1)+"_score";
