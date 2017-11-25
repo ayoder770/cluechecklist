@@ -12,7 +12,7 @@ $(function(){
                     
                 // SET UP VARIABLE FOR UPDATE SCORE CELL
                 var s_upd_cell;
-                s_upd_cell = 'p' + (i+1) + "_" + this_round + "_u";
+                s_upd_cell = 'p' + (i+1) + "_" + (this_round-1) + "_u";
                  
                 // SET UP VARIABLE FOR FORM SCORES
                 var s_get;
