@@ -14,14 +14,19 @@ $(function(){
                document.getElementById("P1").innerHTML = "Andrew";
                 
                 for(var i=0; i<5; i++){
-                    var one = "#p";
+                    var one = "p";
                     var s_new = one + (i+1) + "_" + this_round + "_n";
                     var s_upd = one + (i+1) + "_" + this_round + "_u";
                     alert(s_new);
-                    $(s_new).innerHTML = "P"+(i+1)+"_score";
                     
                     
-                    $(s_new).innerHTML = "P";
+                    document.getElementById(s_new).innerHTML = "P"+(i+1)+"_score";
+                    
+                    
+                  //  $(s_new).innerHTML = "P"+(i+1)+"_score";
+                    
+                    
+                  //  $(s_new).innerHTML = "P";
                     
                     
                 }
