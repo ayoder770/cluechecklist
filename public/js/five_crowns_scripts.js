@@ -30,7 +30,7 @@ $(function(){
                      s_old_total = 'p' + (i+1) + "_" + (this_round - 1) + "_u";
                      
                      
-                     document.getElementById(s_upd_cell).innerHTML = (document.getElementById(s_get).value) + (document.getElementById(s_old_total).value);
+                     document.getElementById(s_upd_cell).innerHTML = (document.getElementById(s_get).value) + (document.getElementById(s_old_total).innerHTML);
                  }   
                  
                     
