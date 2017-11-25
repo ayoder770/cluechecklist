@@ -12,7 +12,7 @@ function draw_next_card(){
         document.getElementById("card").classList.toggle('flipped');
         setTimeout(changeText, 300);
      } else if( deck.length === 0 ){
-         document.getElementById("rs_button").style.display = "block";
+         document.getElementById("rs_overlay").style.display = "block";
          //shuffle_deck();
      }
 }
