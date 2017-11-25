@@ -24,7 +24,7 @@ $(function(){
                     
                     var s_get;
                     s_get = 'P_'+(i+1);
-                    alert(s_get);
+                   // alert(s_get);
                 
                     document.getElementById(s_new_cell).innerHTML = document.getElementById(s_get).value;
                     
