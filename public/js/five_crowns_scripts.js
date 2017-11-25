@@ -3,11 +3,11 @@
 $(function(){
             $('#score_form').on('submit', function(e){
             e.preventDefault();
-                 var P1_score = $("P_1").val();
-                 var P2_score = $("P_2").val();
-                 var P3_score = $("P_3").val();
-                 var P4_score = $("P_4").val();
-                 var P5_score = $("P_5").val();
+                 var P1_score = document.getElementById("P_1").value;
+                 var P2_score = document.getElementById("P_2").value;
+                 var P3_score = document.getElementById("P_3").value;
+                 var P4_score = document.getElementById("P_4").value;
+                 var P5_score = document.getElementById("P_5").value;
          
 alert(P1_score);
                 alert(P2_score);
