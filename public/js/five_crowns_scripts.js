@@ -27,7 +27,7 @@ $(function(){
                      
                      // SET UP VARIABLE FOR PREVIOUS ROUNDS TOTAL SCORE
                      var s_old_total;
-                     s_old_total = s_upd_cell = 'p' + (i+1) + "_" + (this_round - 1) + "_u";
+                     s_old_total = 'p' + (i+1) + "_" + (this_round - 1) + "_u";
                      
                      
                      document.getElementById(s_upd_cell).innerHTML = (document.getElementById(s_get).value) + (document.getElementById(s_old_total).value);
