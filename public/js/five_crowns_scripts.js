@@ -16,16 +16,16 @@ $(function(){
                 
                 for(var i=0; i<5; i++){
                    
-                    var s_new;
-                    s_new = 'p' + (i+1) + '_' + this_round + '_n';
+                    var s_new_cell;
+                    s_new_cell = 'p' + (i+1) + '_' + this_round + '_n';
                     var s_upd = 'p' + (i+1) + "_" + this_round + "_u";
                  //   alert(s_new);
                     
                     
                     var s_get;
-                    s_get = 'P'+(i+1);
+                    s_get = 'P_'+(i+1);
                 
-                    document.getElementById(s_new).innerHTML = document.getElementById(s_get).value;
+                    document.getElementById(s_new_cell).innerHTML = document.getElementById(s_get).value;
                     
                     
                   //  $(s_new).innerHTML = "P"+(i+1)+"_score";
