@@ -3,7 +3,19 @@
     border: 1px solid #000000;
     height: 25px;
     border-radius: 4px;
-} 
+}  
+
+#score_form{
+    width: 70%;
+    text-align: center;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding-top: 10px;
+    background-color: rgba(20,20,20,.8);
+    z-index: 1000;
+    top: 50px;
+    position: absolute;
+}
 
 body{
     height: 100vh;
