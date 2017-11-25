@@ -130,13 +130,15 @@ body{
     border-radius: 5px;
     color: #ffffff;
     margin: auto;
-    margin-top: 25px;
-    padding: 10px 0px;
+    margin-top: 150px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 0px;
     box-sizing: border-box;
 }
 #rs_button:hover{
-    color: #FFFFFF;
-    background-color: #000000;
+    color: #000000;
+    background-color: #FFFFFF;
     cursor: pointer;
 }
 .sorry{
