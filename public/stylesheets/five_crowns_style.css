@@ -3,4 +3,21 @@
     border: 1px solid #000000;
     height: 25px;
     border-radius: 4px;
+} 
+
+.full_row{
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.round{
+    position: relative;
+    width: 10%;
+    border: 1px solid #000000;
+}
+.class{
+    position: relative;
+    width: 18%;
+    border: 1px solid #000000;
 }
