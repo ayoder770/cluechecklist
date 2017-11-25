@@ -7,6 +7,15 @@ body{
     overflow: hidden;
 }
 
+#rs_overlay{
+    position: absolute;
+    z-index: 1000;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(20,20,20,.6);
+    display: block;
+}
+
 #sorry_whole_page{
     width: 350px;
     height: 560px;
