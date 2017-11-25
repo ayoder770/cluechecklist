@@ -9,6 +9,7 @@ body{
     height: 100vh;
     width: 100%;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 #fc_whole_page{
@@ -33,4 +34,28 @@ body{
     position: relative;
     width: 18%;
     border: 1px solid #000000;
+    text-align: center;
+    padding: 5px 0px;
+    font-weight: bold;
+}
+.score_cont{
+    display: block;
+    width: 18%;
+    position: relative;
+}
+.fc_round{
+    width: 10%;
+    position: relative;
+    height: 30px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+.this_score{
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+.this_update{
+    border: 1px solid #000000;
+    font-weight: bold;
+    box-sizing: border-box;
 }
