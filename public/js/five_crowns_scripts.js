@@ -24,7 +24,7 @@ $(function(){
                document.getElementById(name).innerHTML = "N/A"; 
             }
             
-            document.getElementById(fname).innerHTML = "";
+            document.getElementById(fname).value = '';
         }   
     });                 
 }); 
