@@ -7,14 +7,18 @@ $(function(){
         
         for(var i=0; i<5; i++){
             
-            var name;
-            name = "PN_"+(i+1);
+            var fname;
+            fname = "PN_"+(i+1);
             
             var holder;
             holder = "P_"+(i+1);
             
+            var name;
+            name = "P"+i;
+            
             if( name != ""){
-                document.getElementById(holder).placeholder = document.getElementById(name).value;
+                document.getElementById(holder).placeholder = document.getElementById(fname).value;
+                document.getElementById(name).innerHTML = document.getElementById(fname).value;
             }  
         }   
     });                 
