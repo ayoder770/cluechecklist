@@ -34,7 +34,11 @@
     display: none;
 }
 .toggle_form{
-    display: block;
+    display: block!important;
+}
+
+#score_button{
+
 }
 
 body{
