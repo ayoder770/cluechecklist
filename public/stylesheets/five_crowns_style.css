@@ -13,10 +13,11 @@
     height: 50px;
     position: fixed;
     z-index: 1000;
-    background-color: #ffffff;
     text-align: center;
-    font-size: 20px;
-    padding-top: 10px;
+    font-size: 25px;
+    padding-top: 8px;
+    background-color: #D6B12F;
+    color: #FFFFFF;
 }
 
 #score_form{
@@ -38,7 +39,9 @@
 }
 
 #score_button{
-
+    font-size: 20px;
+    width: 200px;
+    padding: 5px 0px;
 }
 
 body{

@@ -3,6 +3,7 @@
 $(function(){
     $('#score_form').on('submit', function(e){
         e.preventDefault();
+        document.getElementById("score_form").classList.toggle('toggle_form');
                 
             for(var i=0; i<5; i++){
                    
