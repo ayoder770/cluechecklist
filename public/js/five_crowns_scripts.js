@@ -39,5 +39,5 @@ $(function(){
 
 
 function enter_scores(){
-    document.getElementById("enter_score_bar").classList.toggle('toggle_form');
+    document.getElementById("form_cont").classList.toggle('toggle_form');
 }
