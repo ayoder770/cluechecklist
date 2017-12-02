@@ -1,6 +1,13 @@
  var this_round = 3;
 
 $(function(){
+    $('#name_form').on('submit', function(e){
+        e.preventDefault();
+        document.getElementById("name_form_cont").style.display = "none";
+    });                 
+}); 
+
+$(function(){
     $('#score_form').on('submit', function(e){
         e.preventDefault();
         document.getElementById("score_form").classList.toggle('toggle_form');
