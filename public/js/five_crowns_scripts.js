@@ -22,7 +22,9 @@ $(function(){
             } else{
                document.getElementById(holder).placeholder = "N/A";
                document.getElementById(name).innerHTML = "N/A"; 
-            }  
+            }
+            
+            document.getElementById(fname).innerHTML = "";
         }   
     });                 
 }); 
