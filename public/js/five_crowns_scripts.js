@@ -14,11 +14,14 @@ $(function(){
             holder = "P_"+(i+1);
             
             var name;
-            name = "P"+i;
+            name = "P"+(i+1);
             
             if( name != ""){
                 document.getElementById(holder).placeholder = document.getElementById(fname).value;
                 document.getElementById(name).innerHTML = document.getElementById(fname).value;
+            } else{
+               document.getElementById(holder).placeholder = "N/A";
+               document.getElementById(name).innerHTML = "N/A"; 
             }  
         }   
     });                 
