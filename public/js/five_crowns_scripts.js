@@ -4,8 +4,22 @@ $(function(){
     $('#name_form').on('submit', function(e){
         e.preventDefault();
         document.getElementById("name_form_cont").style.display = "none";
+        
+        for(var i=0; i<5; i++){
+            
+            var name;
+            name = "PN_"+(i+1);
+            
+            var holder;
+            holder = "P_"+(i+1);
+            
+            if( name != ""){
+                document.getElementById(holder).placeholder = document.getElementById(name).value;
+            }  
+        }   
     });                 
 }); 
+
 
 $(function(){
     $('#score_form').on('submit', function(e){
