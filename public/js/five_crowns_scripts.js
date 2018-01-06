@@ -1,5 +1,3 @@
- //var this_round = 3;
-  
 $(function(){
     $('#name_form').on('submit', function(e){
         e.preventDefault();
@@ -64,7 +62,6 @@ $(function(){
                  }   
                        
             }
-        //this_round++;
     });                 
 }); 
 
@@ -80,10 +77,3 @@ $('.fc_round').click(function(){
     console.log(new_id);
     console.log(this_id);  
 });
-
-function enter_scores(){
-    document.getElementById("score_form").classList.toggle('toggle_form');
-    var this_id = $(this).attr('id');
-    console.log(this_id);
-    
-}
