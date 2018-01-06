@@ -51,10 +51,13 @@ function sub_pts(){
     document.getElementById(up_cont).innerHTML = update;
 }
 
-function taboo(){
-    console.log("hello from taboo");
-}
-
-function pass(){
-    console.log("hello from pass");
+function taboo_or_pass(){
+    if(whosup == "a"){
+        b_pts = b_pts + 1;
+        var update = b_pts;
+    } else{
+        a_pts = a_pts + 1;
+        var update = a_pts;
+    }
+    document.getElementById(up_cont).innerHTML = update;
 }
