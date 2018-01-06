@@ -59,5 +59,5 @@ function taboo_or_pass(){
         a_pts = a_pts + 1;
         var update = a_pts;
     }
-    document.getElementById(up_cont).innerHTML = update;
+    document.getElementById(not_cont).innerHTML = update;
 }
