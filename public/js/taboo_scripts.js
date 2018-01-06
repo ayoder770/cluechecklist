@@ -26,14 +26,11 @@ function team_b_turn(){
 }
 
 function begin_turn(){
-    console.log(whosup);
-    console.log(notup);
     document.getElementById("turn_pick").classList.toggle('hide_turn_cover');
     clock_func = setInterval(count_down,1000);
 }
 
 function count_down(){
-    console.log("Time: "+seconds);
     seconds = seconds - 1;
     document.getElementById("clock_time").innerHTML = seconds;
     if(seconds == 0){
