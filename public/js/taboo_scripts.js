@@ -17,6 +17,8 @@ function team_a_turn(){
 function team_b_turn(){
     whosup = "b";
     notup = "a";
+    up_cont = "team_b_pts";
+    not_cont = "team_a_pts";
     begin_game();
     
 }
@@ -28,8 +30,12 @@ function begin_game(){
 }
 
 function add_pts(){
-    document.getElementById(up_cont).value = this[whosup+'_pts']+1;
-    console.log("hello from add points");
+    if(whosup == "a"){
+        var update = a_pts +1;
+    } else{
+        var update = b_pts +1;
+    }
+    document.getElementById(up_cont).value = update;
 }
 
 function sub_pts(){
