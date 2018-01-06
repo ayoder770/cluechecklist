@@ -12,9 +12,9 @@
   
 <div class="turn_overlay">
     <div class="turn_button_cont">
-        <div class="turn_button" style="margin-bottom:20px;">Team A Turn</div>
+        <div onclick="team_a_turn()" class="turn_button" style="margin-bottom:20px;">Team A Turn</div>
         
-        <div class="turn_button">Team B Turn</div>
+        <div onclick="team_a_turn()" class="turn_button">Team B Turn</div>
     </div>
 </div>   
     
@@ -24,13 +24,13 @@
     </div> 
     
     <div class="forty team_a">
-        <div class="inner_block clickable"><div onclick="add_a()" class="inner_text team_name">+1</div></div>
-        <div class="inner_block clickable"><div onclick="sub_a()" class="inner_text team_name">-1</div></div>
+        <div class="inner_block clickable"><div onclick="add_pts()" class="inner_text team_name">+1</div></div>
+        <div class="inner_block clickable"><div onclick="sub_pts()" class="inner_text team_name">-1</div></div>
     </div> 
     
     <div class="forty team_b">
-        <div class="inner_block clickable"><div onclick="add_b()" class="inner_text team_name">Pass</div></div>
-        <div class="inner_block clickable"><div onclick="sub_b()" class="inner_text team_name">Taboo</div></div>
+        <div class="inner_block clickable"><div onclick="pass()" class="inner_text team_name">Pass</div></div>
+        <div class="inner_block clickable"><div onclick="taboo()" class="inner_text team_name">Taboo</div></div>
     </div> 
     
     <div class="twenty">
