@@ -18,8 +18,19 @@ body{margin: 0px;}
     padding: 8px;
     box-sizing: border-box;
     border: 2px solid #000000;
+    width: 100%;
+    text-align: center;
 }
 .inner_text{
     display: table-cell;
     vertical-align: middle;
+}
+.team_name{
+    font-size: 40px;
+}
+.team_a{
+    
+}
+.team_b{
+    
 }
