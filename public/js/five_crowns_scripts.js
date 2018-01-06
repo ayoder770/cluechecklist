@@ -64,6 +64,14 @@ $(function(){
                        
             }
         $('#score_form').children('input').val('')
+        if(this_round < 13){
+            var this_row;
+            var next_row;
+            this_row = "row_round_"+this_round;
+            next_row = "row_round_"+(this_round+1);
+            document.getElementById(this_row).style.backgroundColor = "#FFFFFF";
+            document.getElementById(next_row).style.backgroundColor = "#C494D2";
+        }
     });                 
 }); 
 
