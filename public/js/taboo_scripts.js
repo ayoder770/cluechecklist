@@ -2,9 +2,13 @@ var a_pts = 0;
 var b_pts = 0;
 var whosup;
 var notup;
+var up_cont;
+var not_cont;
 
 function team_a_turn(){
     whosup = "a";
+    up_cont = "team_a_pts";
+    not_cont = "team_b_pts";
     notup = "b";
     begin_game();
     
@@ -24,7 +28,7 @@ function begin_game(){
 }
 
 function add_pts(){
-    document.getElementById('team_'+whosup+'_pts').value = this[whosup+'_pts']+1;
+    document.getElementById(up_cont).value = this[whosup+'_pts']+1;
     console.log("hello from add points");
 }
 
