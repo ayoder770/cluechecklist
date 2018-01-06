@@ -35,7 +35,7 @@ function begin_game(){
 function count_down(){
     console.log("Time: "+seconds);
     seconds = seconds - 1;
-    document.getElementById("clock_time") = seconds;
+    document.getElementById("clock_time").innerHTML = seconds;
     if(seconds == 0){
         
     }
