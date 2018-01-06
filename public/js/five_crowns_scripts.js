@@ -23,7 +23,8 @@ $(function(){
             }
             
             document.getElementById(fname).value = '';
-        }   
+        } 
+        
     });                 
 }); 
 
@@ -62,6 +63,7 @@ $(function(){
                  }   
                        
             }
+        $('#score_form').children('input').val('')
     });                 
 }); 
 
