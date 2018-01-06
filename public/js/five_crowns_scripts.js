@@ -43,8 +43,8 @@ $(function(){
                     
                 // SET UP VARIABLE FOR UPDATE SCORE CELL
                 var s_upd_cell;
-                s_upd_cell = 'p' + (i+1) + "_" + (this_round) + "_u";
-                 
+                s_upd_cell = 'p' + (i+1) + "_" + this_round + "_u";
+                 console.log(s_upd_cell);
                 // SET UP VARIABLE FOR FORM SCORES
                 var s_get;
                 s_get = 'P_'+(i+1);
