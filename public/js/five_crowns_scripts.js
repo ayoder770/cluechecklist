@@ -69,6 +69,7 @@ $(function(){
             var next_row;
             this_row = "row_round_"+this_round;
             next_row = "row_round_"+(this_round+1);
+            console.log(next_row);
             document.getElementById(this_row).style.backgroundColor = "#FFFFFF";
             document.getElementById(next_row).style.backgroundColor = "#C494D2";
         }

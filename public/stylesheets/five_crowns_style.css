@@ -111,6 +111,9 @@ body{
     font-size: 30px;
     padding-top: 6px;
 }
+.fc_round: hover{
+    cursor: pointer;
+}
 .this_score{
     height: 25px;
     border: 1px solid #000000;
