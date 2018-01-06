@@ -4,6 +4,7 @@ var whosup;
 var notup;
 var up_cont;
 var not_cont;
+var seconds = 60;
 
 function team_a_turn(){
     whosup = "a";
