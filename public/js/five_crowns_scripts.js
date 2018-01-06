@@ -35,7 +35,7 @@ $(function(){
         //e.preventDefault();
         document.getElementById("score_form").classList.toggle('toggle_form');
         var this_round = document.getElementById("hid_round").value;
-        console.log("thisround " this_round);
+        console.log("thisround "+ this_round);
             for(var i=0; i<5; i++){
                    
                 // SET UP VARIABLE FOR NEW SCORE CELL
