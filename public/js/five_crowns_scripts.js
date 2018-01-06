@@ -69,7 +69,6 @@ $(function(){
             var next_row;
             this_row = "row_round_"+this_round;
             next_row = "row_round_"+(Number(this_round) + 1);
-            console.log(next_row);
             document.getElementById(this_row).style.backgroundColor = "#FFFFFF";
             document.getElementById(next_row).style.backgroundColor = "#C494D2";
         }
@@ -81,10 +80,5 @@ $('.fc_round').click(function(){
     var this_id = $(this).attr('id');
     var splt = this_id.split("_");
     var new_id = Number(splt[1]);
-    document.getElementById("hid_round").value = new_id;
-    
-    
-    
-    console.log(new_id);
-    console.log(this_id);  
+    document.getElementById("hid_round").value = new_id; 
 });
