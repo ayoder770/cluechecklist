@@ -29,7 +29,7 @@ function begin_game(){
     console.log(whosup);
     console.log(notup);
     document.getElementById("turn_pick").classList.toggle('hide_turn_cover');
-    clock_func = setTimeout(count_down,1000);
+    clock_func = setInterval(count_down,1000);
 }
 
 function count_down(){
