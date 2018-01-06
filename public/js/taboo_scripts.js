@@ -4,7 +4,7 @@ var whosup;
 var notup;
 var up_cont;
 var not_cont;
-var seconds = 10;
+var seconds = 60;
 var clock_func;
 
 function team_a_turn(){
@@ -47,7 +47,7 @@ function end_turn(){
     document.getElementById("turn_pick").classList.toggle('hide_turn_cover');
     var x = document.getElementById("myAudio");
     x.play();
-    seconds = 10;
+    seconds = 60;
     document.getElementById("clock_time").innerHTML = seconds;
 }
 
