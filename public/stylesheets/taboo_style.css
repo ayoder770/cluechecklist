@@ -37,3 +37,17 @@ body{margin: 0px;}
 .clickable{
     cursor: pointer;
 }
+.turn_overlay{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(40,40,40,.6);
+    display: table;
+}
+.turn_button_cont{
+    display: table-cell;
+    vertical-align: middle;
+}
+.turn_button{
+    
+}
