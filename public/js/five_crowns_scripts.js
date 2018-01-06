@@ -1,4 +1,4 @@
- var this_round = 3;
+ //var this_round = 3;
   
 $(function(){
     $('#name_form').on('submit', function(e){
@@ -32,9 +32,10 @@ $(function(){
 
 $(function(){
     $('#score_form').on('submit', function(e){
-        e.preventDefault();
+        //e.preventDefault();
         document.getElementById("score_form").classList.toggle('toggle_form');
-                
+        var this_round = document.getElementById("hid_round").value;
+        console.log("thisround " this_round);
             for(var i=0; i<5; i++){
                    
                 // SET UP VARIABLE FOR NEW SCORE CELL
@@ -71,7 +72,11 @@ $('.fc_round').click(function(){
     document.getElementById("score_form").classList.toggle('toggle_form');
     var this_id = $(this).attr('id');
     var splt = this_id.split("_");
-    var new_id = splt[1];
+    var new_id = Number(splt[1]);
+    document.getElementById("hid_round").value = new_id;
+    
+    
+    
     console.log(new_id);
     console.log(this_id);  
 });
