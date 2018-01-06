@@ -31,15 +31,24 @@ function begin_game(){
 
 function add_pts(){
     if(whosup == "a"){
-        var update = a_pts +1;
+        a_pts = a_pts + 1;
+        var update = a_pts;
     } else{
-        var update = b_pts +1;
+        b_pts = b_pts + 1;
+        var update = b_pts;
     }
     document.getElementById(up_cont).innerHTML = update;
 }
 
 function sub_pts(){
-    console.log("hello from sub points");
+    if(whosup == "a"){
+        a_pts = a_pts - 1;
+        var update = a_pts;
+    } else{
+        b_pts = b_pts - 1;
+        var update = b_pts;
+    }
+    document.getElementById(up_cont).innerHTML = update;
 }
 
 function taboo(){
