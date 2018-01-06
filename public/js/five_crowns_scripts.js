@@ -32,7 +32,7 @@ $(function(){
 
 $(function(){
     $('#score_form').on('submit', function(e){
-        //e.preventDefault();
+        e.preventDefault();
         document.getElementById("score_form").classList.toggle('toggle_form');
         var this_round = document.getElementById("hid_round").value;
         console.log("thisround "+ this_round);
@@ -64,7 +64,7 @@ $(function(){
                  }   
                        
             }
-        this_round++;
+        //this_round++;
     });                 
 }); 
 
