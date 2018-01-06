@@ -1,17 +1,26 @@
 var a_pts = 0;
 var b_pts = 0;
 var whosup;
+var notup;
 
 function team_a_turn(){
+    whosup = "a";
+    notup = "b";
+    begin_game();
     
 }
 
 function team_b_turn(){
+    whosup = "b";
+    notup = "a";
+    begin_game
     
 }
 
 function begin_game(){
-    
+    console.log(whosup);
+    console.log(notup);
+    document.getElementById("turn_pick").classList.toggle('hide_turn_cover');
 }
 
 function add_pts(){

@@ -64,3 +64,6 @@ body{margin: 0px;}
     color: #000000;
     cursor: pointer;
 }
+.hide_turn_cover{
+    display: none;
+}
