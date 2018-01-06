@@ -71,4 +71,7 @@ $(function(){
 
 function enter_scores(){
     document.getElementById("score_form").classList.toggle('toggle_form');
+    var this_id = this.id;
+    console.log(this_id);
+    
 }
