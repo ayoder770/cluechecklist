@@ -4,7 +4,8 @@ var whosup;
 var notup;
 var up_cont;
 var not_cont;
-var seconds = 60;
+var seconds = 10;
+var clock_func;
 
 function team_a_turn(){
     whosup = "a";
@@ -28,6 +29,16 @@ function begin_game(){
     console.log(whosup);
     console.log(notup);
     document.getElementById("turn_pick").classList.toggle('hide_turn_cover');
+    clock_func = setTimeout(count_down,1000);
+}
+
+function count_down(){
+    console.log("Time: "+seconds);
+    seconds = seconds - 1;
+    document.getElementById("clock_time") = seconds;
+    if(seconds == 0){
+        
+    }
 }
 
 function add_pts(){
