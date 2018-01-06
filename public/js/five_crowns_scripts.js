@@ -67,11 +67,15 @@ $(function(){
     });                 
 }); 
 
-
+$('fc_round').click(function(){
+    document.getElementById("score_form").classList.toggle('toggle_form');
+    var this_id = $(this).attr('id');
+    console.log(this_id);  
+});
 
 function enter_scores(){
     document.getElementById("score_form").classList.toggle('toggle_form');
-    var this_id = this.id;
+    var this_id = $(this).attr('id');
     console.log(this_id);
     
 }
