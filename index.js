@@ -65,6 +65,11 @@ app.get('/sorry', function(request, response) {
   response.render('pages/sorry');
 });
 
+//Taboo Game
+app.get('/taboo', function(request, response) {
+  response.render('pages/taboo');
+});
+
 //Sends data of specific device ID to client side
 app.get('/sendData', function(request, response) {
     collection.find({'device':request.query.id}).sort({'_id': -1}).limit(100).toArray(function(err, data){
