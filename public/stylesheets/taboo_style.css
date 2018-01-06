@@ -34,3 +34,6 @@ body{margin: 0px;}
 .team_b{
     background-color: coral;
 }
+.clickable{
+    cursor: pointer;
+}
