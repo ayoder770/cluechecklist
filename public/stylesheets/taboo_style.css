@@ -41,8 +41,10 @@ body{margin: 0px;}
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: rgba(40,40,40,.6);
+    background-color: rgba(0,0,0,.8);
     display: table;
+    z-index: 100;
+    text-align: center;
 }
 .turn_button_cont{
     display: table-cell;
