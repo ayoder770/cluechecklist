@@ -35,7 +35,7 @@ function add_pts(){
     } else{
         var update = b_pts +1;
     }
-    document.getElementById(up_cont).value = update;
+    document.getElementById(up_cont).innerHTML = update;
 }
 
 function sub_pts(){
