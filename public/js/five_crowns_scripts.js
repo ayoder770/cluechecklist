@@ -51,7 +51,7 @@ $(function(){
                      
                 document.getElementById(s_new_cell).innerHTML = document.getElementById(s_get).value;
                 
-                 if(this_round === 3 ){
+                 if(this_round == 3 ){
                      document.getElementById(s_upd_cell).innerHTML = document.getElementById(s_get).value;
                  } else{
                      
