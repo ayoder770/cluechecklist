@@ -70,6 +70,9 @@ $(function(){
 $('.fc_round').click(function(){
     document.getElementById("score_form").classList.toggle('toggle_form');
     var this_id = $(this).attr('id');
+    var splt = this_id.split("_");
+    var new_id = splt[1];
+    console.log(new_id);
     console.log(this_id);  
 });
 
