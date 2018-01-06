@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/five_crowns_style.css" />
 </head>
     
-    
+      
 <body>
     <div onclick="enter_scores()" id="enter_score_bar">
         Enter Scores
@@ -18,11 +18,11 @@
     <div id="name_form_cont" style="width:100%;text-align:center;">   
         <form class="all_forms" autocomplete="off" id="name_form" role = "form">
                                  
-         <input class="name_input" id="PN_1" type="test" placeholder = "Player 1"/><br>
-         <input class="name_input" id="PN_2" type="test" placeholder = "Player 2"/><br>
-         <input class="name_input" id="PN_3" type="test" placeholder = "Player 3"/><br>
-         <input class="name_input" id="PN_4" type="test" placeholder = "Player 4"/><br>
-         <input class="name_input" id="PN_5" type="test" placeholder = "Player 5"/><br>
+         <input class="name_input" id="PN_1" type="text" placeholder = "Player 1"/><br>
+         <input class="name_input" id="PN_2" type="text" placeholder = "Player 2"/><br>
+         <input class="name_input" id="PN_3" type="text" placeholder = "Player 3"/><br>
+         <input class="name_input" id="PN_4" type="text" placeholder = "Player 4"/><br>
+         <input class="name_input" id="PN_5" type="text" placeholder = "Player 5"/><br>
                                 
         <button class="score_button" type="submit">Enter Names</button>
                 
@@ -33,11 +33,11 @@
     <div style="width:100%;text-align:center;">   
         <form autocomplete="off" id = "score_form" role = "form">
                                  
-         <input class="name_input" id="P_1" type="test" placeholder = ""/><br>
-         <input class="name_input" id="P_2" type="test" placeholder = ""/><br>
-         <input class="name_input" id="P_3" type="test" placeholder = ""/><br>
-         <input class="name_input" id="P_4" type="test" placeholder = ""/><br>
-         <input class="name_input" id="P_5" type="test" placeholder = ""/><br>
+         <input class="name_input" id="P_1" type="number" placeholder = ""/><br>
+         <input class="name_input" id="P_2" type="number" placeholder = ""/><br>
+         <input class="name_input" id="P_3" type="number" placeholder = ""/><br>
+         <input class="name_input" id="P_4" type="number" placeholder = ""/><br>
+         <input class="name_input" id="P_5" type="number" placeholder = ""/><br>
                                 
         <button class="score_button" type="submit">Submit Scores</button>
                 
@@ -55,7 +55,7 @@
     </div>
         
     <div class="full_row">
-        <div class="fc_round">3</div>
+        <div id="round_3" class="fc_round">3</div>
         <div class="score_cont">
             <div class="this_score"  id="p1_3_n"></div>
             <div class="this_update" id="p1_3_u"></div>
@@ -79,7 +79,7 @@
     </div>
         
     <div class="full_row">
-        <div class="fc_round">4</div>
+        <div id="round_4" class="fc_round">4</div>
         <div class="score_cont">
             <div class="this_score"  id="p1_4_n"></div>
             <div class="this_update" id="p1_4_u"></div>
@@ -103,7 +103,7 @@
     </div>
         
     <div class="full_row">
-        <div class="fc_round">5</div>
+        <div id="round_5" class="fc_round">5</div>
         <div class="score_cont">
             <div class="this_score"  id="p1_5_n"></div>
             <div class="this_update" id="p1_5_u"></div>
@@ -127,7 +127,7 @@
     </div>
         
     <div class="full_row">
-        <div class="fc_round">6</div>
+        <div id="round_6" class="fc_round">6</div>
         <div class="score_cont">
             <div class="this_score"  id="p1_6_n"></div>
             <div class="this_update" id="p1_6_u"></div>
@@ -151,7 +151,7 @@
     </div>
         
     <div class="full_row">
-        <div class="fc_round">7</div>
+        <div id="round_7" class="fc_round">7</div>
         <div class="score_cont">
             <div class="this_score"  id="p1_7_n"></div>
             <div class="this_update" id="p1_7_u"></div>
@@ -175,7 +175,7 @@
     </div>
         
     <div class="full_row">
-        <div class="fc_round">8</div>
+        <div id="round_8" class="fc_round">8</div>
         <div class="score_cont">
             <div class="this_score"  id="p1_8_n"></div>
             <div class="this_update" id="p1_8_u"></div>
@@ -199,7 +199,7 @@
     </div>
         
     <div class="full_row">
-        <div class="fc_round">9</div>
+        <div id="round_9" class="fc_round">9</div>
         <div class="score_cont">
             <div class="this_score"  id="p1_9_n"></div>
             <div class="this_update" id="p1_9_u"></div>
@@ -223,7 +223,7 @@
     </div>
         
     <div class="full_row">
-        <div class="fc_round">10</div>
+        <div id="round_10" class="fc_round">10</div>
         <div class="score_cont">
             <div class="this_score"  id="p1_10_n"></div>
             <div class="this_update" id="p1_10_u"></div>
@@ -247,7 +247,7 @@
     </div>
         
     <div class="full_row">
-        <div class="fc_round">J</div>
+        <div id="round_11" class="fc_round">J</div>
         <div class="score_cont">
             <div class="this_score"  id="p1_11_n"></div>
             <div class="this_update" id="p1_11_u"></div>
@@ -271,7 +271,7 @@
     </div>
         
     <div class="full_row">
-        <div class="fc_round">Q</div>
+        <div id="round_12" class="fc_round">Q</div>
         <div class="score_cont">
             <div class="this_score"  id="p1_12_n"></div>
             <div class="this_update" id="p1_12_u"></div>
@@ -295,7 +295,7 @@
     </div>
         
     <div class="full_row">
-        <div class="fc_round">K</div>
+        <div id="round_13" class="fc_round">K</div>
         <div class="score_cont">
             <div class="this_score"  id="p1_13_n"></div>
             <div class="this_update" id="p1_13_u"></div>
