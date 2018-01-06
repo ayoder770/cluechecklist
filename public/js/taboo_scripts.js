@@ -13,7 +13,6 @@ function team_a_turn(){
     not_cont = "team_b_pts";
     notup = "b";
     begin_turn();
-    
 }
 
 function team_b_turn(){
@@ -22,7 +21,6 @@ function team_b_turn(){
     up_cont = "team_b_pts";
     not_cont = "team_a_pts";
     begin_turn();
-    
 }
 
 function begin_turn(){
