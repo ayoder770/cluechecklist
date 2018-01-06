@@ -12,7 +12,7 @@ function team_a_turn(){
     up_cont = "team_a_pts";
     not_cont = "team_b_pts";
     notup = "b";
-    begin_game();
+    begin_turn();
     
 }
 
@@ -21,11 +21,11 @@ function team_b_turn(){
     notup = "a";
     up_cont = "team_b_pts";
     not_cont = "team_a_pts";
-    begin_game();
+    begin_turn();
     
 }
 
-function begin_game(){
+function begin_turn(){
     console.log(whosup);
     console.log(notup);
     document.getElementById("turn_pick").classList.toggle('hide_turn_cover');
@@ -37,8 +37,18 @@ function count_down(){
     seconds = seconds - 1;
     document.getElementById("clock_time").innerHTML = seconds;
     if(seconds == 0){
-        
+        end_turn();
     }
+}
+
+
+function end_turn(){
+    clearInterval(clock_func);
+    document.getElementById("turn_pick").classList.toggle('hide_turn_cover');
+    var x = document.getElementById("myAudio");
+    x.play();
+    seconds = 10;
+    document.getElementById("clock_time").innerHTML = seconds;
 }
 
 function add_pts(){
