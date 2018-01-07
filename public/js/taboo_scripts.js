@@ -94,5 +94,9 @@ function new_game(){
 }
 
 function stop_clock(){
-    
+    clearInterval(clock_func);
+    document.getElementById(whosup_block).classList.toggle('my_turn');
+    seconds = 60;
+    document.getElementById("turn_pick").classList.toggle('hide_turn_cover');
+    document.getElementById("clock_time").innerHTML = seconds;
 }

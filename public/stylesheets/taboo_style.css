@@ -86,13 +86,15 @@ body{margin: 0px;}
 }
 .new_game_button{
     position: absolute;
+    top: 0px;
+    height: 20px;
     background-color: green;
     color: #FFFFFF;
-    font-size: 20px;
 }
 .stop_button{
+    height: 20px;
+    bottom: 0px;
     position: absolute;
     background-color: red;
-    font-size: 20px;
     color: #FFFFFF;
 }
