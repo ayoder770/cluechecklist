@@ -106,17 +106,11 @@ $(function(){
         e.preventDefault();
         var ta_name = document.getElementById("TA").value;
         var tb_name = document.getElementById("TB").value;
-        console.log(ta_name);
-        console.log(tb_name);
- 
         document.getElementById("team_a_one").innerHTML = ta_name;
         document.getElementById("team_a_two").innerHTML = ta_name;
-        
         document.getElementById("team_b_one").innerHTML = tb_name;
         document.getElementById("team_b_two").innerHTML = tb_name;
-        
         $('#team_names').children('input').val('');
-        
         document.getElementById("form_cont").classList.toggle('hide');
         document.getElementById("turn_pick").classList.toggle('hide');
     });                 

@@ -68,16 +68,10 @@ body{margin: 0px;}
     color: #000000;
     cursor: pointer;
 }
-.hide_turn_cover{
-    display: none;
-}
 .my_turn{
     background-color:#00CED1;
     color: #FFFFFF;
     font-weight: bold;
-}
-.turn_over_hide{
-    display: none;
 }
 .times_up_text{
     color: #FFFFFF;
@@ -123,4 +117,7 @@ body{margin: 0px;}
 }
 .hide{
     display: none;
+}
+.points_style{
+    font-size: 20px;
 }
