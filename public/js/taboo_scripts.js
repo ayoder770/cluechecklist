@@ -90,7 +90,15 @@ function taboo_or_pass(){
 }
 
 function new_game(){
-    
+    a_pts = 0;
+    b_pts = 0;
+    seconds = 60;
+    document.getElementById("team_a_one").innerHTML = "Team A";
+    document.getElementById("team_a_two").innerHTML = "Team A";
+    document.getElementById("team_b_one").innerHTML = "Team B";
+    document.getElementById("team_b_two").innerHTML = "Team B";
+    document.getElementById("form_cont").classList.toggle('hide');
+    document.getElementById("clock_time").innerHTML = seconds;
 }
 
 function stop_clock(){
