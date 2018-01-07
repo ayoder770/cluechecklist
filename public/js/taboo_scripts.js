@@ -104,7 +104,6 @@ function stop_clock(){
 $(function(){
     $('#team_names').on('submit', function(e){
         e.preventDefault();
-        document.getElementById("score_form").classList.toggle('toggle_form');
         var ta_name = document.getElementById("TA").value;
         var tb_name = document.getElementById("TB").value;
         console.log(ta_name);
