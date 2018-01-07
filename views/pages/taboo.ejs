@@ -9,12 +9,24 @@
 </head>
     
 <div class="full_page">
-  
+
+<div id="name_form_cont" style="width:100%;text-align:center;">   
+        <form class="all_forms" autocomplete="off" id="team_names" role = "form">
+                                 
+         <input class="name_input" id="PN_1" type="text" placeholder = "Player 1"/><br>
+         <input class="name_input" id="PN_2" type="text" placeholder = "Player 2"/><br>                       
+        <button class="score_button" type="submit">Enter Names</button>
+                
+    </form>    
+</div>        
+    
+    
+    
+    
 <div id="turn_pick" class="turn_overlay">
     <div class="turn_button_cont">
-        <div onclick="team_a_turn()" class="turn_button" style="margin-bottom:20px;">Team A Turn</div>
-        
-        <div onclick="team_b_turn()" class="turn_button">Team B Turn</div>
+        <div onclick="team_a_turn()" class="turn_button" style="margin-bottom:20px;"><span id="team_a_one">Team A</span> Turn</div>
+        <div onclick="team_b_turn()" class="turn_button"><span id="team_b_one">Team B</span> Turn</div>
     </div>
 </div>
     
@@ -24,8 +36,8 @@
     </div>
 </div>
     <div class="twenty">
-        <div class="inner_block" id="team_a_block"><div class="inner_text">Team A Has <span id="team_a_pts" class="">0</span> Points</div></div>
-        <div class="inner_block" id="team_b_block"><div class="inner_text">Team B Has <span id="team_b_pts" class="">0</span> Points</div></div>
+        <div class="inner_block" id="team_a_block"><div class="inner_text"><span id="team_a_two">Team A</span> Has <span id="team_a_pts" class="">0</span> Points</div></div>
+        <div class="inner_block" id="team_b_block"><div class="inner_text"><span id="team_b_two">Team B</span> Has <span id="team_b_pts" class="">0</span> Points</div></div>
     </div> 
     
     <div class="team_a forty">

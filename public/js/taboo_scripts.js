@@ -100,3 +100,33 @@ function stop_clock(){
     seconds = 60;
     document.getElementById("clock_time").innerHTML = seconds;
 }
+
+$(function(){
+    $('#team_names').on('submit', function(e){
+        e.preventDefault();
+        document.getElementById("name_form_cont").style.display = "none";
+        
+        for(var i=0; i<5; i++){
+            
+            var fname;
+            fname = "PN_"+(i+1);
+            
+            var holder;
+            holder = "P_"+(i+1);
+            
+            var name;
+            name = "P"+(i+1);
+            
+            if( name != ""){
+                document.getElementById(holder).placeholder = document.getElementById(fname).value;
+                document.getElementById(name).innerHTML = document.getElementById(fname).value;
+            } else{
+               document.getElementById(holder).placeholder = "N/A";
+               document.getElementById(name).innerHTML = "N/A"; 
+            }
+            
+            document.getElementById(fname).value = '';
+        } 
+        
+    });                 
+}); 
