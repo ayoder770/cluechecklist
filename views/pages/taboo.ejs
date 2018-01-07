@@ -18,37 +18,28 @@
     </div>
 </div>
     
-    
 <div id="turn_over" class="turn_overlay turn_over_hide">
-    <div class="turn_button_cont">
-        Time's Up
+    <div class="turn_button_cont times_up_text">
+        Time's Up!
     </div>
 </div>
-    
     <div class="twenty">
         <div class="inner_block" id="team_a_block"><div class="inner_text">Team A Has <span id="team_a_pts" class="">0</span> Points</div></div>
         <div class="inner_block" id="team_b_block"><div class="inner_text">Team B Has <span id="team_b_pts" class="">0</span> Points</div></div>
     </div> 
-    
     <div class="forty team_a">
         <div class="inner_block clickable"><div onclick="add_pts()" class="inner_text team_name">+1</div></div>
         <div class="inner_block clickable"><div onclick="sub_pts()" class="inner_text team_name">-1</div></div>
     </div> 
-    
     <div class="forty team_b">
         <div class="inner_block clickable"><div onclick="taboo_or_pass()" class="inner_text team_name">Pass</div></div>
         <div class="inner_block clickable"><div onclick="taboo_or_pass()" class="inner_text team_name">Taboo</div></div>
     </div> 
-    
     <div class="twenty">
         <div style="height:100%;font-size:20px;" class="inner_block"><div class="inner_text">Time:<br><span id="clock_time">60</span></div></div> 
-    </div> 
-
-    
-    
+    </div>   
 </div>   
-    
-    
+     
 <script type="text/javascript" src="/js/taboo_scripts.js" async defer></script>
     
 <% include ../partials/global_footer.ejs %>

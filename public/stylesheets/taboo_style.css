@@ -68,8 +68,15 @@ body{margin: 0px;}
     display: none;
 }
 .my_turn{
-    background-color:#787878;
+    background-color:#00CED1;
+    color: #FFFFFF;
+    font-weight: bold;
 }
 .turn_over_hide{
     display: none;
+}
+.times_up_text{
+    color: #FFFFFF;
+    font-size: 75px;
+    font-weight: bold;
 }
