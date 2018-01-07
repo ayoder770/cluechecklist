@@ -84,6 +84,7 @@ body{margin: 0px;}
     height: 20px;
     background-color: green;
     color: #FFFFFF;
+    z-index: 200;
 }
 .stop_button{
     height: 20px;
