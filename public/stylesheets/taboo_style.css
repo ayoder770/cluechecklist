@@ -28,11 +28,15 @@ body{margin: 0px;}
 .team_name{
     font-size: 40px;
 }
+.port{
+    font-size: 40px;
+    background-color: #8563B7;
+    color:#ECC721;
+}
 .team_a{
     background-color: beige;
 }
 .team_b{
-    background-color: coral;
 }
 .clickable{
     cursor: pointer;
