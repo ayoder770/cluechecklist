@@ -67,3 +67,6 @@ body{margin: 0px;}
 .hide_turn_cover{
     display: none;
 }
+.my_turn{
+    background-color:acqua;
+}

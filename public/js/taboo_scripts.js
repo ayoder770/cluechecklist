@@ -1,13 +1,15 @@
 var a_pts = 0;
 var b_pts = 0;
+var whosup_block;
 var whosup;
 var notup;
 var up_cont;
 var not_cont;
 var seconds = 60;
 var clock_func;
-
+ 
 function team_a_turn(){
+    whosup_block = "team_a_block";
     whosup = "a";
     up_cont = "team_a_pts";
     not_cont = "team_b_pts";
@@ -16,6 +18,7 @@ function team_a_turn(){
 }
 
 function team_b_turn(){
+    whosup_block = "team_b_block";
     whosup = "b";
     notup = "a";
     up_cont = "team_b_pts";
@@ -25,6 +28,7 @@ function team_b_turn(){
 
 function begin_turn(){
     document.getElementById("turn_pick").classList.toggle('hide_turn_cover');
+    document.getElementById(whosup_block).classList.toggle('my_turn');
     clock_func = setInterval(count_down,1000);
 }
 
@@ -32,16 +36,15 @@ function count_down(){
     seconds = seconds - 1;
     document.getElementById("clock_time").innerHTML = seconds;
     if(seconds == 0){
-        end_turn();
+        end_turn_wait();
     }
 }
 
 
-function end_turn(){
+function end_turn_wait(){
     clearInterval(clock_func);
     document.getElementById("turn_pick").classList.toggle('hide_turn_cover');
-    var x = document.getElementById("myAudio");
-    x.play();
+    document.getElementById(whosup_block).classList.toggle('my_turn');
     seconds = 60;
     document.getElementById("clock_time").innerHTML = seconds;
 }
