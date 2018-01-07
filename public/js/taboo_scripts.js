@@ -43,11 +43,18 @@ function count_down(){
 
 function end_turn_wait(){
     clearInterval(clock_func);
-    document.getElementById("turn_pick").classList.toggle('hide_turn_cover');
+    document.getElementById("turn_over").classList.toggle('turn_over_hide');
     document.getElementById(whosup_block).classList.toggle('my_turn');
     seconds = 60;
+    var endturn = setTimeout(end_turn, 3000);
+}
+
+function end_turn(){
+    document.getElementById("turn_over").classList.toggle('turn_over_hide');
+    document.getElementById("turn_pick").classList.toggle('hide_turn_cover');
     document.getElementById("clock_time").innerHTML = seconds;
 }
+
 
 function add_pts(){
     if(whosup == "a"){

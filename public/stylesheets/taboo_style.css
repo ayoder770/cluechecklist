@@ -70,3 +70,6 @@ body{margin: 0px;}
 .my_turn{
     background-color:#787878;
 }
+.turn_over_hide{
+    display: none;
+}
