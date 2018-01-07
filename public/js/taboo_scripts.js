@@ -88,3 +88,11 @@ function taboo_or_pass(){
     }
     document.getElementById(not_cont).innerHTML = update;
 }
+
+function new_game(){
+    
+}
+
+function stop_clock(){
+    
+}
