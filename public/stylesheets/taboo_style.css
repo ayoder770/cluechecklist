@@ -106,9 +106,7 @@ body{margin: 0px;}
     padding: 20px 0px;
     background-color: rgba(20,20,20,.8);
     z-index: 1000;
-    top: 60px;
-    position: absolute;
-    left: 10%;
+    margin: auto;
     text-align: center;
 }
 .name_input{
