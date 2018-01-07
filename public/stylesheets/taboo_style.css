@@ -25,18 +25,15 @@ body{margin: 0px;}
     display: table-cell;
     vertical-align: middle;
 }
-.team_name{
-    font-size: 40px;
-}
 .port{
     font-size: 40px;
     background-color: #8563B7;
     color:#ECC721;
 }
-.team_a{
-    background-color: beige;
-}
-.team_b{
+.aors{
+    font-size: 40px;
+    background-color: #ECC721;
+    color: #F56A68;
 }
 .clickable{
     cursor: pointer;
@@ -121,4 +118,4 @@ body{margin: 0px;}
 }
 .points_style{
     font-size: 20px;
-}
+} 
