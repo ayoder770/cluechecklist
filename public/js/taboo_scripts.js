@@ -27,7 +27,7 @@ function team_b_turn(){
 }
 
 function begin_turn(){
-    document.getElementById("turn_pick").classList.toggle('hide_turn_cover');
+    document.getElementById("turn_pick").classList.toggle('hide');
     document.getElementById(whosup_block).classList.toggle('my_turn');
     clock_func = setInterval(count_down,1000);
 }
@@ -43,15 +43,15 @@ function count_down(){
 
 function end_turn_wait(){
     clearInterval(clock_func);
-    document.getElementById("turn_over").classList.toggle('turn_over_hide');
+    document.getElementById("turn_over").classList.toggle('hide');
     document.getElementById(whosup_block).classList.toggle('my_turn');
     seconds = 60;
     var endturn = setTimeout(end_turn, 3000);
 }
 
 function end_turn(){
-    document.getElementById("turn_over").classList.toggle('turn_over_hide');
-    document.getElementById("turn_pick").classList.toggle('hide_turn_cover');
+    document.getElementById("turn_over").classList.toggle('hide');
+    document.getElementById("turn_pick").classList.toggle('hide');
     document.getElementById("clock_time").innerHTML = seconds;
 }
 
@@ -96,7 +96,7 @@ function new_game(){
 function stop_clock(){
     clearInterval(clock_func);
     document.getElementById(whosup_block).classList.toggle('my_turn');
-    document.getElementById("turn_pick").classList.toggle('hide_turn_cover');
+    document.getElementById("turn_pick").classList.toggle('hide');
     seconds = 60;
     document.getElementById("clock_time").innerHTML = seconds;
 }
@@ -104,29 +104,21 @@ function stop_clock(){
 $(function(){
     $('#team_names').on('submit', function(e){
         e.preventDefault();
-        document.getElementById("name_form_cont").style.display = "none";
+        document.getElementById("score_form").classList.toggle('toggle_form');
+        var ta_name = document.getElementById("TA").value;
+        var tb_name = document.getElementById("TB").value;
+        console.log(ta_name);
+        console.log(tb_name);
+ 
+        document.getElementById("team_a_one").innerHTML = ta_name;
+        document.getElementById("team_a_two").innerHTML = ta_name;
         
-        for(var i=0; i<5; i++){
-            
-            var fname;
-            fname = "PN_"+(i+1);
-            
-            var holder;
-            holder = "P_"+(i+1);
-            
-            var name;
-            name = "P"+(i+1);
-            
-            if( name != ""){
-                document.getElementById(holder).placeholder = document.getElementById(fname).value;
-                document.getElementById(name).innerHTML = document.getElementById(fname).value;
-            } else{
-               document.getElementById(holder).placeholder = "N/A";
-               document.getElementById(name).innerHTML = "N/A"; 
-            }
-            
-            document.getElementById(fname).value = '';
-        } 
+        document.getElementById("team_b_one").innerHTML = tb_name;
+        document.getElementById("team_b_two").innerHTML = tb_name;
         
+        $('#team_names').children('input').val('');
+        
+        document.getElementById("form_cont").classList.toggle('hide');
+        document.getElementById("turn_pick").classList.toggle('hide');
     });                 
-}); 
+});
