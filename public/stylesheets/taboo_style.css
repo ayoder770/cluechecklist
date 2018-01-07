@@ -100,7 +100,6 @@ body{margin: 0px;}
 }
 .all_forms{
     width: 80%;
-    text-align: center;
     border: 1px solid #000000;
     border-radius: 10px;
     padding: 20px 0px;
@@ -115,9 +114,13 @@ body{margin: 0px;}
     height: 25px;
     border-radius: 4px;
     width: 80%;
+    padding-left: 15px;
 }
 .score_button{
     font-size: 20px;
     width: 200px;
     padding: 5px 0px;
+}
+.hide{
+    display: none;
 }

@@ -9,7 +9,8 @@
 </head>
     
 <div class="full_page">
-
+  
+<!-- TEAM NAME FORM SCREEN -->
 <div class="turn_overlay"> 
     <div class="inner_text">
     <form class="all_forms" autocomplete="off" id="team_names" role = "form">                       
@@ -19,11 +20,9 @@
     </form>  
     </div>
 </div>        
-    
-    
-    
+        
 <!-- SCREEN TO PICK WHOS TURN IT IS -->   
-<div id="turn_pick" class="turn_overlay hide_turn_cover">
+<div id="turn_pick" class="turn_overlay hide">
     <div class="turn_button_cont">
         <div onclick="team_a_turn()" class="turn_button" style="margin-bottom:20px;"><span id="team_a_one">Team A</span> Turn</div>
         <div onclick="team_b_turn()" class="turn_button"><span id="team_b_one">Team B</span> Turn</div>
@@ -31,7 +30,7 @@
 </div>
     
 <!-- TIMES UP SCREEN -->    
-<div id="turn_over" class="turn_overlay turn_over_hide">
+<div id="turn_over" class="turn_overlay hide">
     <div class="turn_button_cont times_up_text">
         Time's Up!
     </div>
