@@ -7,7 +7,7 @@ body{margin: 0px;}
     margin: auto;
     box-shadow: #787878 4px 4px 8px;
     background-color: #ffffff;
-    height: 100vh;
+    height: calc( 100vh - 80px );
 }
 .home_header{
     height: 80px;
