@@ -16,6 +16,9 @@ body{margin: 0px;}
 }
 .hm_header_txt{
     color: #ffffff;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
 }
 .app_cont{
     display: flex;
