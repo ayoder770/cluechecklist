@@ -6,6 +6,8 @@ body{margin: 0px;}
     position: relative;
     margin: auto;
     box-shadow: #787878 4px 4px 8px;
+    background-color: #ffffff;
+    height: 100vh;
 }
 .home_header{
     height: 80px;
