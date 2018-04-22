@@ -90,7 +90,9 @@ $(function(){
                 var score;
                 score = document.getElementById(s_get).value;
                 console.log(score);
-                column_update(this_round, i, score);
+                if( score != null){
+                    column_update(this_round, i, score);
+                }
                 /*
                  if(this_round == 3 ){
                      document.getElementById(s_upd_cell).innerHTML = document.getElementById(s_get).value;
