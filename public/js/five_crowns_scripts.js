@@ -31,7 +31,7 @@ $(function(){
 }); 
 
 function column_update(round_number, player, score){
-    console.log("hello from new func");
+    console.log("Round "+round_number+" | Player "+player+" | Score "+score);
     
     // SET UP VARIABLE FOR "THIS ROUND" SCORE CELL
     var s_new_cell;
@@ -59,7 +59,42 @@ function column_update(round_number, player, score){
             // ADD TO PREVIOUS ROUND SCORE         
             document.getElementById(s_upd_cell).innerHTML = Number(score) + Number(document.getElementById(s_old_total).innerHTML);
         }   
-    }  
+        
+        
+        
+        
+    // THIS IS A CORRECTION
+    } else{
+        
+        // ENTER CORRECTED SCORE
+        document.getElementById(s_new_cell).innerHTML = score;
+        
+        for( var i=round_number; i<current; i++){
+            // SET UP VARIABLE FOR "THIS ROUND" SCORE CELL
+            var s_new_cell;
+            s_new_cell = 'p' + (player+1) + '_' + i + '_n';
+                    
+            // SET UP VARIABLE FOR UPDATE SCORE CELL
+            var s_upd_cell;
+            s_upd_cell = 'p' + (player+1) + "_" + i + "_u";
+    
+            if(round_number != 3){
+                // SET UP VARIABLE FOR PREVIOUS ROUNDS TOTAL SCORE
+                var s_old_total;
+                s_old_total = 'p' + (player+1) + "_" + (i - 1) + "_u";
+            }
+
+        
+        if( i == 3 ){
+            // ENTER SAME SCORE SINCE THIS IS FIRST ROUND
+            document.getElementById(s_upd_cell).innerHTML = Number(score);
+        } else{
+            // ADD TO PREVIOUS ROUND SCORE         
+            document.getElementById(s_upd_cell).innerHTML = Number(score) + Number(document.getElementById(s_old_total).innerHTML);
+        }   
+            
+        
+    } 
 }
 
 
@@ -72,6 +107,7 @@ $(function(){
         document.getElementById("score_form").classList.toggle('toggle_form');
         var this_round = document.getElementById("hid_round").value;
         console.log("thisround "+ this_round);
+        console.log("This round is: "+current);
             for(var i=0; i<5; i++){
             /*    column_update(this_round, i);   
                 // SET UP VARIABLE FOR NEW SCORE CELL
@@ -89,7 +125,7 @@ $(function(){
             //    document.getElementById(s_new_cell).innerHTML = document.getElementById(s_get).value;
                 var score;
                 score = document.getElementById(s_get).value;
-                console.log(score);
+             //   console.log(score);
                 if( score != ""){
                     column_update(this_round, i, score);
                 }
@@ -115,7 +151,7 @@ $(function(){
             document.getElementById(this_row).style.backgroundColor = "#FFFFFF";
             document.getElementById(next_row).style.backgroundColor = "#C494D2";
             current++;
-            console.log(current);
+      //      console.log(current);
         }
     });                 
 }); 
