@@ -52,7 +52,7 @@ function column_update(round_number, player, score){
         // ENTER SCORE FOR THIS ROUND
         document.getElementById(s_new_cell).innerHTML = score;
         
-        if(this_round == 3 ){
+        if(round_number == 3 ){
             // ENTER SAME SCORE SINCE THIS IS FIRST ROUND
             document.getElementById(s_upd_cell).innerHTML = document.getElementById(s_get).value;
         } else{
