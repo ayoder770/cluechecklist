@@ -35,16 +35,16 @@ function column_update(round_number, player, score){
     
     // SET UP VARIABLE FOR "THIS ROUND" SCORE CELL
     var s_new_cell;
-    s_new_cell = 'p' + (player) + '_' + round_number + '_n';
+    s_new_cell = 'p' + (player+1) + '_' + round_number + '_n';
                     
     // SET UP VARIABLE FOR UPDATE SCORE CELL
     var s_upd_cell;
-    s_upd_cell = 'p' + (player) + "_" + round_number + "_u";
+    s_upd_cell = 'p' + (player+1) + "_" + round_number + "_u";
     
     if(round_number != 3){
         // SET UP VARIABLE FOR PREVIOUS ROUNDS TOTAL SCORE
         var s_old_total;
-        s_old_total = 'p' + (player) + "_" + (round_number - 1) + "_u";
+        s_old_total = 'p' + (player+1) + "_" + (round_number - 1) + "_u";
     }
     
     // IF THIS IS NOT A CORRECTION
