@@ -54,10 +54,10 @@ function column_update(round_number, player, score){
         
         if(round_number == 3 ){
             // ENTER SAME SCORE SINCE THIS IS FIRST ROUND
-            document.getElementById(s_upd_cell).innerHTML = document.getElementById(s_get).value;
+            document.getElementById(s_upd_cell).innerHTML = Number(score);
         } else{
             // ADD TO PREVIOUS ROUND SCORE         
-            document.getElementById(s_upd_cell).innerHTML = Number(document.getElementById(s_get).value) + Number(document.getElementById(s_old_total).innerHTML);
+            document.getElementById(s_upd_cell).innerHTML = Number(score) + Number(document.getElementById(s_old_total).innerHTML);
         }   
     }  
 }
