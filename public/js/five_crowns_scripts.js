@@ -90,7 +90,7 @@ $(function(){
                 var score;
                 score = document.getElementById(s_get).value;
                 console.log(score);
-                if( score != null){
+                if( score != ""){
                     column_update(this_round, i, score);
                 }
                 /*
