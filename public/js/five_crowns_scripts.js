@@ -30,10 +30,36 @@ $(function(){
     });                 
 }); 
 
-function column_update(round_number, player){
+function column_update(round_number, player, score){
     console.log("hello from new func");
     
+    // SET UP VARIABLE FOR "THIS ROUND" SCORE CELL
+    var s_new_cell;
+    s_new_cell = 'p' + (player) + '_' + round_number + '_n';
+                    
+    // SET UP VARIABLE FOR UPDATE SCORE CELL
+    var s_upd_cell;
+    s_upd_cell = 'p' + (player) + "_" + round_number + "_u";
     
+    if(round_number != 3){
+        // SET UP VARIABLE FOR PREVIOUS ROUNDS TOTAL SCORE
+        var s_old_total;
+        s_old_total = 'p' + (player) + "_" + (round_number - 1) + "_u";
+    }
+    
+    // IF THIS IS NOT A CORRECTION
+    if(round_number == current){
+        // ENTER SCORE FOR THIS ROUND
+        document.getElementById(s_new_cell).innerHTML = score;
+        
+        if(this_round == 3 ){
+            // ENTER SAME SCORE SINCE THIS IS FIRST ROUND
+            document.getElementById(s_upd_cell).innerHTML = document.getElementById(s_get).value;
+        } else{
+            // ADD TO PREVIOUS ROUND SCORE         
+            document.getElementById(s_upd_cell).innerHTML = Number(document.getElementById(s_get).value) + Number(document.getElementById(s_old_total).innerHTML);
+        }   
+    }  
 }
 
 
@@ -47,7 +73,7 @@ $(function(){
         var this_round = document.getElementById("hid_round").value;
         console.log("thisround "+ this_round);
             for(var i=0; i<5; i++){
-                column_update(this_round, i);   
+            /*    column_update(this_round, i);   
                 // SET UP VARIABLE FOR NEW SCORE CELL
                 var s_new_cell;
                 s_new_cell = 'p' + (i+1) + '_' + this_round + '_n';
@@ -60,11 +86,12 @@ $(function(){
                 var s_get;
                 s_get = 'P_'+(i+1);
                      
-                document.getElementById(s_new_cell).innerHTML = document.getElementById(s_get).value;
+                document.getElementById(s_new_cell).innerHTML = document.getElementById(s_get).value;*/
                 var score;
                 score = document.getElementById(s_get).value;
                 console.log(score);
-                
+                column_update(this_round, i, score);
+                /*
                  if(this_round == 3 ){
                      document.getElementById(s_upd_cell).innerHTML = document.getElementById(s_get).value;
                  } else{
@@ -74,17 +101,19 @@ $(function(){
                      s_old_total = 'p' + (i+1) + "_" + (this_round - 1) + "_u";
                      
                      document.getElementById(s_upd_cell).innerHTML = Number(document.getElementById(s_get).value) + Number(document.getElementById(s_old_total).innerHTML);
-                 }   
+                 }  */ 
                        
             }
         $('#score_form').children('input').val('')
-        if(this_round < 13){
+        if((this_round < 13) && (this_round == current)){
             var this_row;
             var next_row;
             this_row = "row_round_"+this_round;
             next_row = "row_round_"+(Number(this_round) + 1);
             document.getElementById(this_row).style.backgroundColor = "#FFFFFF";
             document.getElementById(next_row).style.backgroundColor = "#C494D2";
+            current++;
+            console.log(current);
         }
     });                 
 }); 
