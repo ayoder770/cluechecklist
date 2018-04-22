@@ -97,7 +97,7 @@ function column_update(round_number, player, score){
     } 
 }
 
-
+}
 
 
   
