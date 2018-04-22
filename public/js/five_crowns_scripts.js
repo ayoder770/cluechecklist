@@ -1,3 +1,5 @@
+var current = 3;
+
 $(function(){
     $('#name_form').on('submit', function(e){
         e.preventDefault();
@@ -28,7 +30,16 @@ $(function(){
     });                 
 }); 
 
+function column_update(round_number, player){
+    console.log("hello from new func");
+    
+    
+}
 
+
+
+
+  
 $(function(){
     $('#score_form').on('submit', function(e){
         e.preventDefault();
@@ -36,7 +47,7 @@ $(function(){
         var this_round = document.getElementById("hid_round").value;
         console.log("thisround "+ this_round);
             for(var i=0; i<5; i++){
-                   
+                column_update(this_round, i);   
                 // SET UP VARIABLE FOR NEW SCORE CELL
                 var s_new_cell;
                 s_new_cell = 'p' + (i+1) + '_' + this_round + '_n';
@@ -50,6 +61,9 @@ $(function(){
                 s_get = 'P_'+(i+1);
                      
                 document.getElementById(s_new_cell).innerHTML = document.getElementById(s_get).value;
+                var score;
+                score = document.getElementById(s_get).value;
+                console.log(score);
                 
                  if(this_round == 3 ){
                      document.getElementById(s_upd_cell).innerHTML = document.getElementById(s_get).value;
