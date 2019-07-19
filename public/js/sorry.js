@@ -2,6 +2,7 @@ var deck = [1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 1, 2, 3, 4, 5, 7, 8, 10, 11, 12
 
 var  desc= [ "NULL", "Move from Start or move forward 1.", "Move from Start or move forward 2.<br /><b>DRAW AGAIN</b>", "Move forward 3.", "Move backward 4.", "Move forward 5.","NULL", "Move forward 7 or split between two pawns.", "Move forward 8.", "NULL", "Move forward 10 or move backward 1.", "Move forward 11 or change places with an opponent.", "Move forward 12.", "Move from Start and switch places with an opponent, who you bump back to start." ];
 
+// Function when card is tapped to draw the next card
 function draw_next_card(){
     if(deck.length === 45){
          document.getElementById("card").className = "flipped_half"; 
@@ -11,16 +12,20 @@ function draw_next_card(){
          document.getElementById("card_front").style.transform = "rotateY( 0deg )";
          document.getElementById("card_back").style.transform = "rotateY( 180deg )";
          document.getElementById("card").classList.toggle('flipped');
-         setTimeout(changeText, 300);
+        // setTimeout(changeText, 300);
      } else if( deck.length === 0 ){
          document.getElementById("rs_overlay").style.display = "block";
      }
 }
 
 
- function changeText(){
+// Function to change the text of the card after the card has been drawn
+function changeText(){
+    
+    // Get random number between 0 and length of the deck
     var x = Math.floor((Math.random() * (deck.length)) + 0);
      
+    // 13 represents a Sorry card
     if( deck[x] === 13 ){
         document.getElementById("top_numb").innerHTML = "<div class='sorry'>SORRY!</div>";
         document.getElementById("big_numb").innerHTML = "";
