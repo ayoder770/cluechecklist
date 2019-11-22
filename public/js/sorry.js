@@ -9,7 +9,7 @@ var deckFull = 45;
 // Empty Deck
 var deckEmpty = 0;
 
-// Sorry Card
+// Number to represent a Sorry Card
 var sorryCard = 13;
 
 // Array to hold the description/instructions of each card
@@ -20,17 +20,12 @@ var  desc= [ "NULL", "Move from Start or move forward 1.", "Move from Start or m
 function draw_next_card(){
     
     // Full deck
-    if(deck.length === deckFull){
-         document.getElementById("card").className = "flipped_half"; 
-         setTimeout(changeText, 300);
-        
-    // Deck is not full but not empty
-    } else if( ( deck.length > deckEmpty ) && ( deck.length < deckFull ) ){
-         document.getElementById("card").classList.remove('flipped_half');
+    if(deck.length != deckEmpty){
+   
          document.getElementById("card_front").style.transform = "rotateY( 0deg )";
          document.getElementById("card_back").style.transform = "rotateY( 180deg )";
          document.getElementById("card").classList.toggle('flipped');
-         setTimeout(changeText, 300);
+         setTimeout(changeText, 150);
         
     // Deck is empty and ready to be reset/shuffled
     } else if( deck.length === deckEmpty ){
