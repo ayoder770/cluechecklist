@@ -61,23 +61,57 @@
         }
     });
     
-window.addEventListener("touchstart", eventListener, {passive:false});
+// Function to disable "pull-to-refresh" effect present in some webviews.
+// Especially Crosswalk 12 and above (Chromium 41+) runtimes.
 
-function preventPullToRefresh(element) {
-    var prevent = false;
+window.addEventListener('load', function() {
+    var lastTouchY = 0 ;
+    var maybePreventPullToRefresh = false ;
 
-    document.querySelector(element).addEventListener('touchstart', function(e){
-      if (e.touches.length !== 1) { return; }
+    // Pull-to-refresh will only trigger if the scroll begins when the
+    // document's Y offset is zero.
 
-      var scrollY = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
-      prevent = (scrollY === 0);
-    });
+    var touchstartHandler = function(e) {
+        if( e.touches.length != 1 ) {             
+            return ;
+        }
+        lastTouchY = e.touches[0].clientY ;
+        // maybePreventPullToRefresh = (preventPullToRefreshCheckbox.checked) && (window.pageYOffset == 0) ;
+        maybePreventPullToRefresh = (window.pageYOffset === 0) ;
+        //document.getElementById('txtLog').textContent = "maybePreventPullToRefresh: " + maybePreventPullToRefresh;
+    };
 
-    document.querySelector(element).addEventListener('touchmove', function(e){
-      if (prevent) {
-        prevent = false;
-        e.preventDefault();
-      }
-    });
-  }
-preventPullToRefresh('#page_body') // pass #id or html tag into the method
+    // To suppress pull-to-refresh it is sufficient to preventDefault the
+    // first overscrolling touchmove.
+
+    var touchmoveHandler = function(e) {
+        var touchY = e.touches[0].clientY ;
+        var touchYDelta = touchY - lastTouchY ;
+        lastTouchY = touchY ;
+
+        if (maybePreventPullToRefresh) {
+            maybePreventPullToRefresh = false ;
+            //if (touchYDelta > 0) {
+                e.preventDefault() ;
+                //document.getElementById('txtLog').textContent = "TouchY: " + touchYDelta;
+                // console.log("pull-to-refresh event detected") ;
+                return ;
+            //}
+        }
+
+        // if (preventScrollCheckbox.checked) {
+        //     e.preventDefault() ;
+        //     return ;
+        // }
+
+        // if (preventOverscrollGlowCheckbox.checked) {
+        //     if (window.pageYOffset == 0 && touchYDelta > 0) {
+        //         e.preventDefault() ;
+        //         return ;
+        //     }
+        // }
+    };
+
+    document.addEventListener('touchstart', touchstartHandler, false) ;
+    document.addEventListener('touchmove', touchmoveHandler, false) ;
+}) ;
