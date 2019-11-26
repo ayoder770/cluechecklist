@@ -61,7 +61,7 @@
         }
     });
     
-
+window.addEventListener("touchstart", eventListener, {passive:false});
 
 function preventPullToRefresh(element) {
     var prevent = false;
