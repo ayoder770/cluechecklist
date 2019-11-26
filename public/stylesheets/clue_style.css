@@ -1,8 +1,10 @@
  body{
      margin:0px;
-     overscroll-behavior-y:contain!important;
+     /*overscroll-behavior-y:contain!important;
      overflow-x:hidden;
-     overflow-y:hidden;
+     overflow-y:hidden;*/
+     position: fixed;
+     overflow: scroll;
 }    
     .full_page{
         width:100%;
