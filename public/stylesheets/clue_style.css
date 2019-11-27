@@ -1,6 +1,6 @@
  body{
      margin:0px;
-     overscroll-behavior-y:contain!important;
+   /*  overscroll-behavior-y:contain!important;*/
 }     
     .full_page{
         width:100%;
