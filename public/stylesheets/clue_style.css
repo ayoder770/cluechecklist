@@ -1,9 +1,8 @@
  body{
      margin:0px;
      overscroll-behavior-y:contain!important;
-     overflow-x:hidden;
-     overflow-y:hidden;
-}    
+     overflow:hidden;
+}     
     .full_page{
         width:100%;
         font-family: sans-serif;

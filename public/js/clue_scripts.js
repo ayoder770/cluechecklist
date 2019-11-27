@@ -61,16 +61,3 @@
         }
     });
     
-const target = window 
-let lastY = 0
-
-target.addEventListener('touchmove', handleTouchMove)
-
-function handleTouchMove(e) {
-  const { pageY } = e.changedTouches[0]
-  const scrollY = target.pageYOffset || target.scrollTop || 0
-  if (pageY > lastY && scrollY === 0) {
-    e.preventDefault()
-  }
-  lastY = pageY
-});
