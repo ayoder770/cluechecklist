@@ -48,7 +48,7 @@ $(function(){
     document.getElementById("name_form_cont").classList.toggle('display_none');
         
     // Set column width based on number of players
-    var scoreColumnWidth = round(90 / numberOfPlayers);
+    var scoreColumnWidth = Math.round(90 / numberOfPlayers);
     $("<style/>", {text: ".score_cont {width:"+scoreColumnWidth+"%;}"}).appendTo('head');    
     });                 
 }); 
