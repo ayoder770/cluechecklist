@@ -5,6 +5,9 @@ var numberOfPlayers;
 $(function(){
     $('#player_number_form').on('submit', function(e){
     e.preventDefault();
+    
+    // Go to top of page
+    $('html,body').scrollTop(0);
         
     // Set the number of players based on user input
     // Ensure a value was entered
@@ -27,7 +30,16 @@ $(function(){
     // Build the entire scorecard
     // Outer loop for number of rounds in a five crowns game
     for(var j=3; j<=13; j++){
-        scoreHTML+="<div id='row_round_"+j+"' class='full_row'><div id='round_"+j+"' class='fc_round'>"+j+"</div>";
+        if( j == 11 ){
+            roundValue = "J";
+        } else if( j == 12 ){
+            roundValue = "Q";
+        } else if( j == 13 ){
+            roundValue = "K";
+        } else {
+            roundValue = j;
+        }
+        scoreHTML+="<div id='row_round_"+j+"' class='full_row'><div id='round_"+j+"' class='fc_round'>"+roundValue+"</div>";
         // Inner Loop based on how many players are playing
         for(var k=1; k<=numberOfPlayers; k++){
             scoreHTML+="<div class='score_cont player_width'><div class='this_score' id='p"+k+"_"+j+"_n'></div><div class='this_update' id='p"+k+"_"+j+"_u'></div></div>"
@@ -64,7 +76,7 @@ $(function(){
     // Set column width based on number of players
     var scoreColumnWidth = Math.round(90 / numberOfPlayers);
     $("<style/>", {text: ".player_width {width:"+scoreColumnWidth+"%;}"}).appendTo('head');    
-    });                 
+    });  
 }); 
  
 
@@ -72,6 +84,9 @@ $(function(){
 $(function(){
     $('#name_form').on('submit', function(e){
         e.preventDefault();
+        
+        // Go to top of page
+        $('html,body').scrollTop(0);
         
         // Turn off the form as it is no longer needed
         document.getElementById("name_form_cont").classList.toggle('display_block');
@@ -96,7 +111,11 @@ $(function(){
                document.getElementById(scoreFormNameID).placeholder = "N/A";
                document.getElementById(nameColumnHeaderID).innerHTML = "N/A"; 
             }  
-        } 
+        }
+        
+        // Set the background for row three column
+        document.getElementById("row_round_3").style.backgroundColor="#C494D2";
+        
     });                 
 }); 
 
@@ -201,6 +220,9 @@ $(function(){
         document.getElementById(next_row).style.backgroundColor = "#C494D2";
         current++;
     }
+        
+    // Go to top of page
+    $('html,body').scrollTop(0);
         
     });    
 }); 
