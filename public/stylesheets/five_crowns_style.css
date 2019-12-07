@@ -85,7 +85,6 @@ body{
 }
 .player{
     position: relative;
-    width: 18%;
     border: 1px solid #000000;
     text-align: center;
     padding: 5px 0px;
@@ -94,8 +93,7 @@ body{
 }
 .score_cont{
     display: block;
-    position: relative;
-    
+    position: relative;  
 }
 .fc_round{
     width: 10%;

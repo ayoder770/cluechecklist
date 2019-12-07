@@ -16,7 +16,7 @@ $(function(){
     //Build the player name header
     var scoreHTML = "<div class='full_row'><div class='round'></div>";
     for(var i=1; i<= numberOfPlayers; i++){
-        scoreHTML+="<div class='player' id='P"+i+"'>Plyr. "+i+"</div>";
+        scoreHTML+="<div class='player player_width' id='P"+i+"'>Plyr. "+i+"</div>";
     }
     scoreHTML+="</div>";
         
@@ -26,7 +26,7 @@ $(function(){
         scoreHTML+="<div id='row_round_"+j+"' class='full_row'><div id='round_"+j+"' class='fc_round'>"+j+"</div>";
         // Inner Loop based on how many players are playing
         for(var k=1; k<=numberOfPlayers; k++){
-            scoreHTML+="<div class='score_cont'><div class='this_score' id='p"+k+"_"+j+"_n'></div><div class='this_update' id='p"+k+"_"+j+"_u'></div></div>"
+            scoreHTML+="<div class='score_cont player_width'><div class='this_score' id='p"+k+"_"+j+"_n'></div><div class='this_update' id='p"+k+"_"+j+"_u'></div></div>"
         }
         scoreHTML+="</div>";  
     }
@@ -49,7 +49,7 @@ $(function(){
         
     // Set column width based on number of players
     var scoreColumnWidth = Math.round(90 / numberOfPlayers);
-    $("<style/>", {text: ".score_cont {width:"+scoreColumnWidth+"%;}"}).appendTo('head');    
+    $("<style/>", {text: ".player_width {width:"+scoreColumnWidth+"%;}"}).appendTo('head');    
     });                 
 }); 
  
