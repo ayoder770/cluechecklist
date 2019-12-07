@@ -36,16 +36,17 @@ $(function(){
     }
         
     // Populate HTML for the name form
-    var nameFormHTML;
+    var nameFormHTML='';
     for(var l=1; l<=numberOfPlayers; l++){
         nameFormHTML+="<input id='PN_"+l+"' type='text' placeholder='Player "+l+"'/><br>";
     }
         
     // Populate HTML for the score form
-    var scoreFormHTML;
+    var scoreFormHTML='';
     for(var m=1; m<=numberOfPlayers; m++){
         scoreFormHTML+="<input id='P_"+m+"' type='number' placeholder=''/><br>";
     }
+    scoreFormHTML+="<input type='hidden' id='hid_round'/><br>";
         
     // Set the HTML for the name form
     document.getElementById("name_form_input").innerHTML=nameFormHTML;

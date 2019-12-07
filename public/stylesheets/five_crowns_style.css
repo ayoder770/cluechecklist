@@ -64,6 +64,10 @@ button{
     font-size: 20px;
     width: 200px;
 }
+button:hover{
+    cursor: pointer;
+    background-color: #A37E00;
+}
 
 body{
     height: 100vh;
