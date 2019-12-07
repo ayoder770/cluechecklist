@@ -6,12 +6,16 @@ $(function(){
     $('#player_number_form').on('submit', function(e){
     e.preventDefault();
         
+    // Set the number of players based on user input
+    // Ensure a value was entered
+    numberOfPlayers = document.getElementById("number_of_players").value;
+    if ( numberOfPlayers === '' ){
+        return;
+    }
+        
     // Turn off the form as it is no longer needed
     document.getElementById("player_number_form").classList.toggle('display_block');
     document.getElementById("player_number_form").classList.toggle('display_none');
-        
-    // Set the number of players based on user input
-    numberOfPlayers = document.getElementById("number_of_players").value;
         
     //Build the player name header
     var scoreHTML = "<div class='full_row'><div class='round'></div>";
@@ -34,11 +38,20 @@ $(function(){
     // Populate HTML for the name form
     var nameFormHTML;
     for(var l=1; l<=numberOfPlayers; l++){
-        nameFormHTML+="<input class='name_input' id='PN_"+l+"' type='text' placeholder='Player "+l+"'/><br>";
+        nameFormHTML+="<input id='PN_"+l+"' type='text' placeholder='Player "+l+"'/><br>";
+    }
+        
+    // Populate HTML for the score form
+    var scoreFormHTML;
+    for(var m=1; m<=numberOfPlayers; m++){
+        scoreFormHTML+="<input id='P_"+m+"' type='number' placeholder=''/><br>";
     }
         
     // Set the HTML for the name form
     document.getElementById("name_form_input").innerHTML=nameFormHTML;
+        
+    // Set the HTML for the score form
+    document.getElementById("score_form_input").innerHTML=scoreFormHTML;
         
     // Set the form HTML on the page 
     document.getElementById("scorecard_master_container").innerHTML=scoreHTML;
@@ -58,29 +71,30 @@ $(function(){
 $(function(){
     $('#name_form').on('submit', function(e){
         e.preventDefault();
+        
+        // Turn off the form as it is no longer needed
         document.getElementById("name_form_cont").classList.toggle('display_block');
         document.getElementById("name_form_cont").classList.toggle('display_none');
         
-        for(var i=0; i<numberOfPlayers; i++){
+        // Loop through names one by one
+        for(var i=1; i<=numberOfPlayers; i++){
             
-            var fname;
-            fname = "PN_"+(i+1);
+            // ID of form input element containing player name 
+            var inputNameID = "PN_"+i;
+            var playerName = document.getElementById(inputNameID).value;
+            // ID of element to replace score form placeholder with name
+            var scoreFormNameID = 'P_'+i;
+            // ID of element containing the player's name at top of card
+            var nameColumnHeaderID = 'P'+i;
             
-            var holder;
-            holder = "P_"+(i+1);
-            
-            var name;
-            name = "P"+(i+1);
-            
-            if( name != ""){
-                document.getElementById(holder).placeholder = document.getElementById(fname).value;
-                document.getElementById(name).innerHTML = document.getElementById(fname).value;
+            // Update the DOM with player's name
+            if( playerName != ""){
+                document.getElementById(scoreFormNameID).placeholder = playerName;
+                document.getElementById(nameColumnHeaderID).innerHTML = playerName;
             } else{
-               document.getElementById(holder).placeholder = "N/A";
-               document.getElementById(name).innerHTML = "N/A"; 
-            }
-            
-            document.getElementById(fname).value = '';
+               document.getElementById(scoreFormNameID).placeholder = "N/A";
+               document.getElementById(nameColumnHeaderID).innerHTML = "N/A"; 
+            }  
         } 
     });                 
 }); 
@@ -171,9 +185,7 @@ $(function(){
         // If score is not empty, update player's score
         if( playerScore != ""){
             column_update(this_round, i, playerScore);
-        }
-               
-                       
+        }                  
     }
       
     // Remove values from the score form for next round
@@ -202,4 +214,3 @@ $('#scorecard_master_container').on("click", ".fc_round", function(){
     var new_id = Number(splt[1]);
     document.getElementById("hid_round").value = new_id; 
 });
-

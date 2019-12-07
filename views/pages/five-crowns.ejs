@@ -16,6 +16,14 @@
     </div>
     
     <div id="fc_whole_page">
+        
+    <!-- Form to display on page load. Total number of players -->
+    <div class="display_block" style="width:100%;text-align:center;"> 
+        <form class="all_forms" autocomplete="off" id = "player_number_form" role = "form">                      
+            <input class="name_input" id="number_of_players" type="number" placeholder = "Enter Number of Players"/><br>                   
+            <button type="submit">Submit</button> 
+        </form>   
+    </div>    
      
     <!-- Form to input player's names -->
     <div class="display_none" id="name_form_cont" style="width:100%;text-align:center;">   
@@ -23,33 +31,20 @@
             <div id="name_form_input">
                 <!-- Content is dynamic based on number of players -->
             </div>                                    
-            <button class="score_button" type="submit">Enter Names</button>          
+            <button type="submit">Enter Names</button>          
         </form> 
     </div>    
   
     <!-- Form for entering player's score -->
     <div id="score_form_cont" class="display_none" style="width:100%;text-align:center;">   
         <form autocomplete="off" id = "score_form" role = "form">
-                                 
-         <input class="name_input" id="P_1" type="number" placeholder = ""/><br>
-         <input class="name_input" id="P_2" type="number" placeholder = ""/><br>
-         <input class="name_input" id="P_3" type="number" placeholder = ""/><br>
-         <input class="name_input" id="P_4" type="number" placeholder = ""/><br>
-         <input class="name_input" id="P_5" type="number" placeholder = ""/><br>
-         <input type = "hidden" id="hid_round"/><br>
-                                
-        <button class="score_button" type="submit">Submit Scores</button>
-                
+            <div id="score_form_input">
+                <!-- Content is dynamic based on number of players -->
+            </div>
+        <button type="submit">Submit Scores</button>       
     </form>
         
     </div>   
-       
-    <!-- Initial Form to display on page load -->
-    <div class="display_block" style="width:100%;text-align:center;"> 
-        <form class="all_forms" autocomplete="off" id = "player_number_form" role = "form">                      
-         <input class="name_input" id="number_of_players" type="number" placeholder = "Enter Number of Players"/><br>                   
-        <button class="score_button" type="submit">Submit</button> </form>   
-    </div>    
   
     <!-- Player name header and full game Scorecard -->
     <div id="scorecard_master_container">
@@ -58,12 +53,7 @@
              
 </div>
   
-   
-      
-  
-    
 </body>  
-
     
 <script type="text/javascript" src="/js/five_crowns_scripts.js" async defer></script>  
 <% include ../partials/global_footer.ejs %>
