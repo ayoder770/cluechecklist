@@ -4,7 +4,7 @@ var numberOfPlayers;
 // Function to read number of players and build the form dynamically
 $(function(){
     $('#player_number_form').on('submit', function(e){
-        e.preventDefault();
+    e.preventDefault();
         
     // Turn off the form as it is no longer needed
     document.getElementById("player_number_form").classList.toggle('display_block');
@@ -47,6 +47,9 @@ $(function(){
     document.getElementById("name_form_cont").classList.toggle('display_block');
     document.getElementById("name_form_cont").classList.toggle('display_none');
         
+    // Set column width based on number of players
+    var scoreColumnWidth = round(90 / numberOfPlayers);
+    $("<style/>", {text: ".score_cont {width:"+scoreColumnWidth+"%;}"}).appendTo('head');    
     });                 
 }); 
  
