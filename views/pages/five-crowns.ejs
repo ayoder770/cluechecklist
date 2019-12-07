@@ -7,29 +7,24 @@
 <% include ../partials/global_header.ejs %> 
 <link rel="stylesheet" type="text/css" href="/stylesheets/five_crowns_style.css" />
 </head>
-        
+         
 <body>
     <div id="enter_score_bar">
         Five Crowns Scorecard
     </div>
     <div id="fc_whole_page">
-        
-    <div id="name_form_cont" style="width:100%;text-align:center;">   
-        <form class="all_forms" autocomplete="off" id="name_form" role = "form">
-                                 
-         <input class="name_input" id="PN_1" type="text" placeholder = "Player 1"/><br>
-         <input class="name_input" id="PN_2" type="text" placeholder = "Player 2"/><br>
-         <input class="name_input" id="PN_3" type="text" placeholder = "Player 3"/><br>
-         <input class="name_input" id="PN_4" type="text" placeholder = "Player 4"/><br>
-         <input class="name_input" id="PN_5" type="text" placeholder = "Player 5"/><br>
-                                
+       
+    <div class="display_none" id="name_form_cont" style="width:100%;text-align:center;">   
+        <form class="all_forms" autocomplete="off" id="name_form" role ="form">
+          <div id="name_form_input"></div>                                    
         <button class="score_button" type="submit">Enter Names</button>
                 
     </form>
         
     </div>    
-   
-    <div style="width:100%;text-align:center;">   
+  
+    <!-- Form for entering player's score -->
+    <div id="score_form_cont" class="display_none" style="width:100%;text-align:center;">   
         <form autocomplete="off" id = "score_form" role = "form">
                                  
          <input class="name_input" id="P_1" type="number" placeholder = ""/><br>
@@ -43,372 +38,31 @@
                 
     </form>
         
+    </div>   
+       
+    <!-- Initial Form to display on page load -->
+    <div class="display_block" style="width:100%;text-align:center;"> 
+        <form class="all_forms" autocomplete="off" id = "player_number_form" role = "form">                      
+         <input class="name_input" id="number_of_players" type="number" placeholder = "Enter Number of Players"/><br>                   
+        <button class="score_button" type="submit">Submit</button> </form>   
     </div>    
-        
-    <div class="full_row">
-        <div class="round"></div>
-        <div class="player" id="P1">Plyr. 1</div>
-        <div class="player" id="P2">Plyr. 2</div>
-        <div class="player" id="P3">Plyr. 3</div>
-        <div class="player" id="P4">Plyr. 4</div>
-        <div class="player" id="P5">Plyr. 5</div> 
-    </div>
-        
-    <div id="row_round_3" style="background-color:#C494D2;" class="full_row">
-        <div id="round_3" class="fc_round">3</div>
-        <div class="score_cont">
-            <div class="this_score"  id="p1_3_n"></div>
-            <div class="this_update" id="p1_3_u"></div>
+  
+        <div id="scorecard_master_container">
+    
         </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p2_3_n"></div>
-            <div class="this_update" id="p2_3_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p3_3_n"></div>
-            <div class="this_update" id="p3_3_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p4_3_n"></div>
-            <div class="this_update" id="p4_3_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p5_3_n"></div>
-            <div class="this_update" id="p5_3_u"></div>
-        </div>
-    </div>
-        
-    <div id="row_round_4" class="full_row">
-        <div id="round_4" class="fc_round">4</div>
-        <div class="score_cont">
-            <div class="this_score"  id="p1_4_n"></div>
-            <div class="this_update" id="p1_4_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p2_4_n"></div>
-            <div class="this_update" id="p2_4_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p3_4_n"></div>
-            <div class="this_update" id="p3_4_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p4_4_n"></div>
-            <div class="this_update" id="p4_4_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p5_4_n"></div>
-            <div class="this_update" id="p5_4_u"></div>
-        </div>
-    </div>
-        
-    <div id="row_round_5" class="full_row">
-        <div id="round_5" class="fc_round">5</div>
-        <div class="score_cont">
-            <div class="this_score"  id="p1_5_n"></div>
-            <div class="this_update" id="p1_5_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p2_5_n"></div>
-            <div class="this_update" id="p2_5_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p3_5_n"></div>
-            <div class="this_update" id="p3_5_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p4_5_n"></div>
-            <div class="this_update" id="p4_5_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p5_5_n"></div>
-            <div class="this_update" id="p5_5_u"></div>
-        </div>
-    </div>
-        
-    <div id="row_round_6" class="full_row">
-        <div id="round_6" class="fc_round">6</div>
-        <div class="score_cont">
-            <div class="this_score"  id="p1_6_n"></div>
-            <div class="this_update" id="p1_6_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p2_6_n"></div>
-            <div class="this_update" id="p2_6_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p3_6_n"></div>
-            <div class="this_update" id="p3_6_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p4_6_n"></div>
-            <div class="this_update" id="p4_6_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p5_6_n"></div>
-            <div class="this_update" id="p5_6_u"></div>
-        </div>
-    </div>
-        
-    <div id="row_round_7" class="full_row">
-        <div id="round_7" class="fc_round">7</div>
-        <div class="score_cont">
-            <div class="this_score"  id="p1_7_n"></div>
-            <div class="this_update" id="p1_7_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p2_7_n"></div>
-            <div class="this_update" id="p2_7_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p3_7_n"></div>
-            <div class="this_update" id="p3_7_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p4_7_n"></div>
-            <div class="this_update" id="p4_7_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p5_7_n"></div>
-            <div class="this_update" id="p5_7_u"></div>
-        </div>
-    </div>
-        
-    <div id="row_round_8" class="full_row">
-        <div id="round_8" class="fc_round">8</div>
-        <div class="score_cont">
-            <div class="this_score"  id="p1_8_n"></div>
-            <div class="this_update" id="p1_8_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p2_8_n"></div>
-            <div class="this_update" id="p2_8_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p3_8_n"></div>
-            <div class="this_update" id="p3_8_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p4_8_n"></div>
-            <div class="this_update" id="p4_8_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p5_8_n"></div>
-            <div class="this_update" id="p5_8_u"></div>
-        </div>
-    </div>
-        
-    <div id="row_round_9" class="full_row">
-        <div id="round_9" class="fc_round">9</div>
-        <div class="score_cont">
-            <div class="this_score"  id="p1_9_n"></div>
-            <div class="this_update" id="p1_9_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p2_9_n"></div>
-            <div class="this_update" id="p2_9_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p3_9_n"></div>
-            <div class="this_update" id="p3_9_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p4_9_n"></div>
-            <div class="this_update" id="p4_9_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p5_9_n"></div>
-            <div class="this_update" id="p5_9_u"></div>
-        </div>
-    </div>
-        
-    <div id="row_round_10" class="full_row">
-        <div id="round_10" class="fc_round">10</div>
-        <div class="score_cont">
-            <div class="this_score"  id="p1_10_n"></div>
-            <div class="this_update" id="p1_10_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p2_10_n"></div>
-            <div class="this_update" id="p2_10_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p3_10_n"></div>
-            <div class="this_update" id="p3_10_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p4_10_n"></div>
-            <div class="this_update" id="p4_10_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p5_10_n"></div>
-            <div class="this_update" id="p5_10_u"></div>
-        </div>
-    </div>
-        
-    <div id="row_round_11" class="full_row">
-        <div id="round_11" class="fc_round">J</div>
-        <div class="score_cont">
-            <div class="this_score"  id="p1_11_n"></div>
-            <div class="this_update" id="p1_11_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p2_11_n"></div>
-            <div class="this_update" id="p2_11_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p3_11_n"></div>
-            <div class="this_update" id="p3_11_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p4_11_n"></div>
-            <div class="this_update" id="p4_11_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p5_11_n"></div>
-            <div class="this_update" id="p5_11_u"></div>
-        </div>
-    </div>
-        
-    <div id="row_round_12" class="full_row">
-        <div id="round_12" class="fc_round">Q</div>
-        <div class="score_cont">
-            <div class="this_score"  id="p1_12_n"></div>
-            <div class="this_update" id="p1_12_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p2_12_n"></div>
-            <div class="this_update" id="p2_12_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p3_12_n"></div>
-            <div class="this_update" id="p3_12_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p4_12_n"></div>
-            <div class="this_update" id="p4_12_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p5_12_n"></div>
-            <div class="this_update" id="p5_12_u"></div>
-        </div>
-    </div>
-        
-    <div id="row_round_13" class="full_row">
-        <div id="round_13" class="fc_round">K</div>
-        <div class="score_cont">
-            <div class="this_score"  id="p1_13_n"></div>
-            <div class="this_update" id="p1_13_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p2_13_n"></div>
-            <div class="this_update" id="p2_13_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p3_13_n"></div>
-            <div class="this_update" id="p3_13_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p4_13_n"></div>
-            <div class="this_update" id="p4_13_u"></div>
-        </div>
-        <div class="score_cont">
-            <div class="this_score"  id="p5_13_n"></div>
-            <div class="this_update" id="p5_13_u"></div>
-        </div>
-    </div>
              
 </div>
-   <!-- 
-    <form id="players_form" role="form">
-        
-            <label for="days">Number of Players</label>
-            <input style="width:150px;height:32px;" id="players" type="text"  placeholder="ex: 5 (Players)" required="" autocomplete="off"/>
-                       
-                       
-                        <button style="padding:1px 30px;" id="btnSubmit" type="submit">
-                            Submit</button>
-                       
-
-    </form>
-    
-    <div id="name_form">
-    
-     <form id = "names_form" role = "form">
-                                 
-         <input class="name_input" id="P_1" type="test" placeholder = "Player 1"required=""/><br>
-         <input class="name_input" id="P_2" type="test" placeholder = "Player 2"required=""/><br>
-         <input class="name_input" id="P_3" type="test" placeholder = "Player 3"required=""/><br>
-         <input class="name_input" id="P_4" type="test" placeholder = "Player 4"required=""/><br>
-         <input class="name_input" id="P_5" type="test" placeholder = "Player 5"required=""/><br>
-         <input class="name_input" id="P_6" type="test" placeholder = "Player 6"required=""/><br>
-         <input class="name_input" id="P_7" type="test" placeholder = "Player 7"required=""/><br>
-         <input class="name_input" id="P_8" type="test" placeholder = "Player 8"required=""/><br>
-         <input class="name_input" id="P_9" type="test" placeholder = "Player 9"required=""/><br>
-         <input class="name_input" id="P_10" type="test" placeholder = "Player 10"required=""/><br>
-                                
-        <button style="padding:1px 30px;" id="Submit" type="submit">Submit</button>
-                
-    </form>'
-    </div>
-    -->
+  
     <div id="test"></div>
       
     <script>
         
-        /*
-                   $(function(){
-            $('#players_form').on('submit', function(e){
-            e.preventDefault();
-            var players = $('#players').val();
-                
-                console.log("number of players: " + players);
-                document.getElementById("players_form").style.display = "none";
-                
-                name_form = '<form id = "names_form" role = "form">';
-                                for(var i=0; i<players; i++){  
-                               name_form += '<input class="name_input" id="P_'+(i+1)+'" type="test" placeholder = "Player '+(i+1)+'"required=""/><br>';  
-                                }
-                name_form += '<button style="padding:1px 30px;" id="Submit" type="submit">Submit</button>';
-                
-                name_form += '</form>';
-                
-                 document.getElementById("name_form").innerHTML = name_form;
-                
-                
-              $.ajax({
-            type: 'GET',
-            url: '/get_name_form',
-            dataType: 'html',
-                  
-            success: function(result) {
-          //       console.log(result);
-         //   document.getElementById("name_form").innerHTML = result;
-               
-            }
-            });
-            
       
-        });
-                   
-        }); 
-        
-$(function(){
-            $('#names_form').on('submit', function(e){
-            e.preventDefault();
-          //  var players = $('#players').val();
-                console.log("Hello");
-
-               document.getElementById("name_form").innerHTML = "hello";
-      
-        });
-                   
-        });  
-        */
         
       </script>
     
 </body>  
+
     
 <script type="text/javascript" src="/js/five_crowns_scripts.js" async defer></script>  
 <% include ../partials/global_footer.ejs %>

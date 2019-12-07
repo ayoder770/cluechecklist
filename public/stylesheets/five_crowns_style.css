@@ -5,7 +5,7 @@
     border-radius: 4px;
     width: 80%;
 } 
-   
+    
 #enter_score_bar{
     width: 100%;
     box-sizing: border-box;
@@ -46,10 +46,6 @@
     position: absolute;
     left: 10%;
     text-align: center;
-    display: none;
-}
-.toggle_form{
-    display: block!important;
 }
 
 .score_button{
@@ -124,4 +120,10 @@ body{
     border: 1px solid #000000;
     font-weight: bold;
     box-sizing: border-box;
+}
+.display_block{
+    display: block;
+}
+.display_none{
+    display: none;
 }
